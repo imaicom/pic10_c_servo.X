@@ -1,0 +1,30 @@
+### HEXMate logfile and output summary ###
+### Memory Usage ###
+ Unused memory ranges:
+  Ch - 2C5h
+  3FEh - 1FFDh
+  
+ dist/XC8_PIC10F222/debug/pic10_c_servo.X.debug.hex ranges:
+  0h - Bh
+  2C6h - 3FDh
+  1FFEh - 1FFFh
+  
+### Hex Memory Map ###
+ Legend:
+  - = Unused memory
+  F = Filled ROM
+  S = Stored serial code
+  A = Stored ASCII string
+  R = Reserved for checksum
+  C = Stored checksum result
+  T = Trailing code
+  & = Find & replace opcode
+  X = Find & delete opcode
+  1 = dist/XC8_PIC10F222/debug/pic10_c_servo.X.debug.hex
+00000000: 111111111111----------------------------------------------------
+000002C0: ------1111111111111111111111111111111111111111111111111111111111
+00000300: 1111111111111111111111111111111111111111111111111111111111111111
+00000340: 1111111111111111111111111111111111111111111111111111111111111111
+00000380: 1111111111111111111111111111111111111111111111111111111111111111
+000003C0: 11111111111111111111111111111111111111111111111111111111111111--
+00001FC0: --------------------------------------------------------------11
