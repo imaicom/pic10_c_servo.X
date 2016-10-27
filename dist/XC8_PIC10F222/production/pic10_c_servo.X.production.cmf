@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/cgtGF2OTv.obj
+$/tmp/cgtstnWdC.obj
 end_init ENTRY 0 2 2 1 2
 reset_wrap ENTRY 0 0 0 2 2
 reset_vec CODE 0 1FF 1FF 1 2
@@ -53,11 +53,11 @@ STRING 0007-00FF 2
 %LINETAB
 $dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 "/Applications/microchip/xc8/v1.33/include/pic10f222.h":539 0 text0 CODE
-"/tmp/cgtAxGYoi":108 3 cinit ENTRY
-"/tmp/cgtAxGYoi":111 3 cinit ENTRY
-"/tmp/cgtAxGYoi":117 3 cinit ENTRY
-"/tmp/cgtAxGYoi":118 3 cinit ENTRY
-"/tmp/cgtAxGYoi":119 4 cinit ENTRY
+"/tmp/cgtENhANe":108 3 cinit ENTRY
+"/tmp/cgtENhANe":111 3 cinit ENTRY
+"/tmp/cgtENhANe":117 3 cinit ENTRY
+"/tmp/cgtENhANe":118 3 cinit ENTRY
+"/tmp/cgtENhANe":119 4 cinit ENTRY
 "/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c":21 5 jmp_tab ENTRY
 "/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c":15 6 jmp_tab ENTRY
 "/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c":21 12C text1 CODE
@@ -122,14 +122,14 @@ Delay_ms@i D 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X
 abs@t 9 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 ?_abs 9 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 _main 2BC 0 CODE 0 maintext dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/cgtGF2OTv.obj
+___sp 0 0 STACK 2 stack /tmp/cgtstnWdC.obj
 btemp 1C 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 ltemp 1C 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 ttemp 1C 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 wtemp 1C 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-start 4 0 ENTRY 0 init /tmp/cgtGF2OTv.obj
+start 4 0 ENTRY 0 init /tmp/cgtstnWdC.obj
 Delay_ms@DELAY_CNT 9 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-reset_vec 3FE 0 CODE 0 reset_vec /tmp/cgtGF2OTv.obj
+reset_vec 3FE 0 CODE 0 reset_vec /tmp/cgtstnWdC.obj
 _nDONE 39 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 _ADRES 8 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 ltemp0 1C 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
@@ -161,7 +161,7 @@ __Lfunctab 0 0 ENTRY 0 functab -
 __Hcommon 0 0 ABS 0 common -
 __Lcommon 0 0 ABS 0 common -
 _Delay_ms 27A 0 CODE 0 text2 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/cgtGF2OTv.obj
+___int_sp 0 0 STACK 2 stack /tmp/cgtstnWdC.obj
 __Habs1 0 0 ABS 0 abs1 -
 __Labs1 0 0 ABS 0 abs1 -
 __Hsfr0 0 0 ABS 0 sfr0 -
@@ -169,12 +169,12 @@ __Lsfr0 0 0 ABS 0 sfr0 -
 _OPTION 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __Hcode 0 0 ABS 0 code -
 __Lcode 0 0 ABS 0 code -
-stackhi 0 0 ABS 0 - /tmp/cgtGF2OTv.obj
+stackhi 0 0 ABS 0 - /tmp/cgtstnWdC.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 main@width 10 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __pcstackBANK0 9 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-stacklo 0 0 ABS 0 - /tmp/cgtGF2OTv.obj
+stacklo 0 0 ABS 0 - /tmp/cgtstnWdC.obj
 entry__abs A 0 ENTRY 0 jmp_tab dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __Hinit 4 0 ENTRY 0 init -
 __Linit 4 0 ENTRY 0 init -

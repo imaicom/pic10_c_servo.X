@@ -62,9 +62,9 @@ void main(void) {
                     GP2 = 0; GP1 = 1;
                 };
                 
-            } else {GP2 = 1; GP1 = 1;}; // if(abs(ADRES - max_width) > 5)
+            } else {GP2 = 1; GP1 = 1;}; // lock // if(abs(ADRES - max_width) > 5)
             
-         } else {GP2 = 0; GP1 = 0;}; // if((35 <= max_width)&&(max_width < 240))
+         } else {GP2 = 0; GP1 = 0;}; // free // if((35 <= max_width)&&(max_width < 240))
         
     };  //  while(1)
 }
