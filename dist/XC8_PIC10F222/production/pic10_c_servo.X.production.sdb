@@ -78,6 +78,8 @@
 "15 /Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
 [v _Delay_ms Delay_ms `(v  1 s 0 Delay_ms ]
 "21
+[v _abs abs `(i  1 s 2 abs ]
+"26
 [v _main main `(v  1 e 0 0 ]
 "380 /Applications/microchip/xc8/v1.33/include/pic10f222.h
 [v _ADRES ADRES `VEuc  1 e 1 @8 ]
@@ -105,14 +107,20 @@
 [v _GP3 GP3 `VEb  1 e 0 @51 ]
 "539
 [v _nDONE nDONE `VEb  1 e 0 @57 ]
-"21 /Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+"26 /Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
 [v _main main `(v  1 e 0 0 ]
 {
-"23
-[v main@width width `i  1 a 2 9 ]
+"29
+[v main@max_width max_width `i  1 a 2 9 ]
+"28
+[v main@width width `i  1 a 2 7 ]
+"66
+} 0
+"21
+[v _abs abs `(i  1 s 2 abs ]
+{
+[v abs@t t `i  1 p 2 0 ]
 "24
-[v main@max_width max_width `i  1 a 2 7 ]
-"60
 } 0
 "15
 [v _Delay_ms Delay_ms `(v  1 s 0 Delay_ms ]

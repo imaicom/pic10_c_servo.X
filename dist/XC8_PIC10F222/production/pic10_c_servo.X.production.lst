@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.33 build 59893 
-                                                                                               Thu Oct 27 05:39:07 2016
+                                                                                               Thu Oct 27 11:29:47 2016
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 59893
      1                           	processor	10F222
@@ -9,408 +9,540 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
      3                           	opt	lm
      4                           	psect	text0,local,class=CODE,merge=1,delta=2
      5                           	psect	cinit,global,class=ENTRY,merge=1,delta=2
-     6                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
-     7                           	psect	maintext,global,class=CODE,split=1,delta=2
-     8                           	psect	text1,local,class=CODE,merge=1,delta=2
-     9                           	psect	jmp_tab,global,class=ENTRY,delta=2
-    10                           	dabs	1,0x1C,4
-    11  0000                     	;# 
-    12  0001                     	;# 
-    13  0002                     	;# 
-    14  0003                     	;# 
-    15  0004                     	;# 
-    16  0005                     	;# 
-    17  0006                     	;# 
-    18  0007                     	;# 
-    19  0008                     	;# 
-    20  0008                     _ADRES	set	8
-    21  0000                     _OPTION	set	0
-    22  0006                     _TRISGPIO	set	6
-    23  0038                     _ADON	set	56
-    24  003E                     _ANS0	set	62
-    25  003F                     _ANS1	set	63
-    26  003A                     _CHS0	set	58
-    27  003B                     _CHS1	set	59
-    28  0039                     _GO	set	57
-    29  0031                     _GP1	set	49
-    30  0032                     _GP2	set	50
-    31  0033                     _GP3	set	51
-    32  0039                     _nDONE	set	57
-    33                           
-    34                           	psect	text0
-    35  000                     __ptext0:	
-    36                           ; #config settings
-    37                           
-    38                           
-    39                           ;psect for function _Delay_ms
-    40  0000                     
-    41                           	psect	cinit
-    42  003                     start_initialization:	
-    43  003                     __initialization:	
-    44  003                     end_of_initialization:	
-    45                           ;End of C runtime variable initialization code
-    46                           
-    47  003                     __end_of__initialization:	
-    48  003  064                	clrf	4
-    49  004  B8A                	ljmp	_main	;jump to C main() function
-    50                           
-    51                           	psect	cstackBANK0
-    52  009                     __pcstackBANK0:	
-    53  009                     ?_Delay_ms:	
-    54  009                     ?_main:	
-    55                           ; 0 bytes @ 0x0
+     6                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	maintext,global,class=CODE,split=1,delta=2
+     9                           	psect	text1,local,class=CODE,merge=1,delta=2
+    10                           	psect	jmp_tab,global,class=ENTRY,delta=2
+    11                           	psect	text2,local,class=CODE,merge=1,delta=2
+    12                           	dabs	1,0x1C,4
+    13  0000                     	;# 
+    14  0001                     	;# 
+    15  0002                     	;# 
+    16  0003                     	;# 
+    17  0004                     	;# 
+    18  0005                     	;# 
+    19  0006                     	;# 
+    20  0007                     	;# 
+    21  0008                     	;# 
+    22  0008                     _ADRES	set	8
+    23  0000                     _OPTION	set	0
+    24  0006                     _TRISGPIO	set	6
+    25  0038                     _ADON	set	56
+    26  003E                     _ANS0	set	62
+    27  003F                     _ANS1	set	63
+    28  003A                     _CHS0	set	58
+    29  003B                     _CHS1	set	59
+    30  0039                     _GO	set	57
+    31  0031                     _GP1	set	49
+    32  0032                     _GP2	set	50
+    33  0033                     _GP3	set	51
+    34  0039                     _nDONE	set	57
+    35                           
+    36                           	psect	text0
+    37  000                     __ptext0:	
+    38                           ; #config settings
+    39                           
+    40                           
+    41                           ;psect for function _Delay_ms
+    42  0000                     
+    43                           	psect	cinit
+    44  003                     start_initialization:	
+    45  003                     __initialization:	
+    46  003                     end_of_initialization:	
+    47                           ;End of C runtime variable initialization code
+    48                           
+    49  003                     __end_of__initialization:	
+    50  003  064                	clrf	4
+    51  004  B5E                	ljmp	_main	;jump to C main() function
+    52                           
+    53                           	psect	cstackCOMMON
+    54  000                     __pcstackCOMMON:	
+    55  000                     ??_abs:	
     56                           
-    57  009                     Delay_ms@DELAY_CNT:	
-    58                           ; 0 bytes @ 0x0
-    59                           
+    57                           	psect	cstackBANK0
+    58  009                     __pcstackBANK0:	
+    59                           ; 0 bytes @ 0x0
     60                           
-    61                           ; 2 bytes @ 0x0
-    62  009                     	ds	2
-    63  00B                     ??_Delay_ms:	
+    61  009                     ?_Delay_ms:	
+    62  009                     ?_main:	
+    63                           ; 0 bytes @ 0x0
     64                           
-    65                           ; 0 bytes @ 0x2
-    66  00B                     	ds	2
-    67  00D                     Delay_ms@i:	
-    68                           
-    69                           ; 2 bytes @ 0x4
-    70  00D                     	ds	2
-    71  00F                     ??_main:	
-    72                           
-    73                           ; 0 bytes @ 0x6
-    74  00F                     	ds	1
-    75  010                     main@max_width:	
-    76                           
-    77                           ; 2 bytes @ 0x7
-    78  010                     	ds	2
-    79  012                     main@width:	
-    80                           
-    81                           ; 2 bytes @ 0x9
-    82  012                     	ds	2
-    83                           
-    84                           	psect	maintext
-    85  18A                     __pmaintext:	
-    86 ;;
-    87 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
-    88 ;;
-    89 ;; *************** function _main *****************
-    90 ;; Defined at:
-    91 ;;		line 21 in file "main3.c"
-    92 ;; Parameters:    Size  Location     Type
-    93 ;;		None
-    94 ;; Auto vars:     Size  Location     Type
-    95 ;;  width           2    9[BANK0 ] int 
-    96 ;;  max_width       2    7[BANK0 ] int 
-    97 ;; Return value:  Size  Location     Type
-    98 ;;		None               void
-    99 ;; Registers used:
-   100 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+0, btemp+1, btemp+2, btemp+3, pclath, cstack
-   101 ;; Tracked objects:
-   102 ;;		On entry : 17F/0
-   103 ;;		On exit  : 0/0
-   104 ;;		Unchanged: 0/0
-   105 ;; Data sizes:     COMMON   BANK0
-   106 ;;      Params:         0       0
-   107 ;;      Locals:         0       4
-   108 ;;      Temps:          0       1
-   109 ;;      Totals:         0       5
-   110 ;;Total ram usage:        5 bytes
-   111 ;; Hardware stack levels required when called:    1
-   112 ;; This function calls:
-   113 ;;		_Delay_ms
-   114 ;; This function is called by:
-   115 ;;		Startup code after reset
-   116 ;; This function uses a non-reentrant model
-   117 ;;
-   118                           
-   119                           
-   120                           ;psect for function _main
-   121  18A                     _main:	
-   122                           
-   123                           ;main3.c: 23: int width = 0;
-   124                           
-   125                           ;incstack = 0
-   126                           ; Regs used in _main: [wreg-fsr0h+status,2-btemp+3+pclath+cstack]
-   127  18A  072                	clrf	main@width
-   128  18B  073                	clrf	main@width+1
-   129                           
-   130                           ;main3.c: 24: int max_width = 0;
-   131  18C  070                	clrf	main@max_width
-   132  18D  071                	clrf	main@max_width+1
+    65  009                     ?_abs:	
+    66                           ; 0 bytes @ 0x0
+    67                           
+    68  009                     Delay_ms@DELAY_CNT:	
+    69                           ; 2 bytes @ 0x0
+    70                           
+    71  009                     abs@t:	
+    72                           ; 2 bytes @ 0x0
+    73                           
+    74                           
+    75                           ; 2 bytes @ 0x0
+    76  009                     	ds	2
+    77  00B                     ??_Delay_ms:	
+    78                           
+    79                           ; 0 bytes @ 0x2
+    80  00B                     	ds	2
+    81  00D                     Delay_ms@i:	
+    82                           
+    83                           ; 2 bytes @ 0x4
+    84  00D                     	ds	2
+    85  00F                     ??_main:	
+    86                           
+    87                           ; 0 bytes @ 0x6
+    88  00F                     	ds	1
+    89  010                     main@width:	
+    90                           
+    91                           ; 2 bytes @ 0x7
+    92  010                     	ds	2
+    93  012                     main@max_width:	
+    94                           
+    95                           ; 2 bytes @ 0x9
+    96  012                     	ds	2
+    97                           
+    98                           	psect	maintext
+    99  15E                     __pmaintext:	
+   100 ;;
+   101 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+   102 ;;
+   103 ;; *************** function _main *****************
+   104 ;; Defined at:
+   105 ;;		line 26 in file "main3.c"
+   106 ;; Parameters:    Size  Location     Type
+   107 ;;		None
+   108 ;; Auto vars:     Size  Location     Type
+   109 ;;  max_width       2    9[BANK0 ] int 
+   110 ;;  width           2    7[BANK0 ] int 
+   111 ;; Return value:  Size  Location     Type
+   112 ;;		None               void
+   113 ;; Registers used:
+   114 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+0, btemp+1, btemp+2, btemp+3, pclath, cstack
+   115 ;; Tracked objects:
+   116 ;;		On entry : 17F/0
+   117 ;;		On exit  : 0/0
+   118 ;;		Unchanged: 0/0
+   119 ;; Data sizes:     COMMON   BANK0
+   120 ;;      Params:         0       0
+   121 ;;      Locals:         0       4
+   122 ;;      Temps:          0       1
+   123 ;;      Totals:         0       5
+   124 ;;Total ram usage:        5 bytes
+   125 ;; Hardware stack levels required when called:    1
+   126 ;; This function calls:
+   127 ;;		_Delay_ms
+   128 ;;		_abs
+   129 ;; This function is called by:
+   130 ;;		Startup code after reset
+   131 ;; This function uses a non-reentrant model
+   132 ;;
    133                           
-   134                           ;main3.c: 26: OPTION = 0b11000000;
-   135  18E  CC0                	movlw	192
-   136  18F  002                	option
+   134                           
+   135                           ;psect for function _main
+   136  15E                     _main:	
    137                           
-   138                           ;main3.c: 28: TRISGPIO = 0b1000;
-   139  190  C08                	movlw	8
-   140  191  006                	tris	6
-   141                           
-   142                           ;main3.c: 29: ANS0 = 1;
-   143  192  5C7                	bsf	7,6	;volatile
+   138                           ;main3.c: 28: int width = 0;
+   139                           
+   140                           ;incstack = 0
+   141                           ; Regs used in _main: [wreg-fsr0h+status,2-btemp+3+pclath+cstack]
+   142  15E  070                	clrf	main@width
+   143  15F  071                	clrf	main@width+1
    144                           
-   145                           ;main3.c: 30: ANS1 = 0;
-   146  193  4E7                	bcf	7,7	;volatile
-   147                           
-   148                           ;main3.c: 31: CHS1 = 0; CHS0 = 0;
-   149  194  467                	bcf	7,3	;volatile
-   150  195  447                	bcf	7,2	;volatile
-   151                           
-   152                           ;main3.c: 32: ADON = 1;
-   153  196  507                	bsf	7,0	;volatile
-   154                           
-   155                           ;main3.c: 35: Delay_ms(500); GP2 = 1; GP1 = 0;
-   156  197  CF4                	movlw	244
-   157  198  029                	movwf	Delay_ms@DELAY_CNT
-   158  199  C01                	movlw	1
-   159  19A  02A                	movwf	Delay_ms@DELAY_CNT+1
-   160  19B  905                	fcall	entry__Delay_ms
-   161  19C  546                	bsf	6,2	;volatile
-   162  19D  426                	bcf	6,1	;volatile
-   163                           
-   164                           ;main3.c: 36: Delay_ms(500); GP2 = 0; GP1 = 1;
-   165  19E  CF4                	movlw	244
-   166  19F  029                	movwf	Delay_ms@DELAY_CNT
-   167  1A0  C01                	movlw	1
-   168  1A1  02A                	movwf	Delay_ms@DELAY_CNT+1
-   169  1A2  905                	fcall	entry__Delay_ms
-   170  1A3  446                	bcf	6,2	;volatile
-   171  1A4  526                	bsf	6,1	;volatile
-   172                           
-   173                           ;main3.c: 37: Delay_ms(500); GP2 = 1; GP1 = 0;
-   174  1A5  CF4                	movlw	244
-   175  1A6  029                	movwf	Delay_ms@DELAY_CNT
-   176  1A7  C01                	movlw	1
-   177  1A8  02A                	movwf	Delay_ms@DELAY_CNT+1
-   178  1A9  905                	fcall	entry__Delay_ms
-   179  1AA  546                	bsf	6,2	;volatile
-   180  1AB  426                	bcf	6,1	;volatile
-   181                           
-   182                           ;main3.c: 38: Delay_ms(500); GP2 = 0; GP1 = 1;
-   183  1AC  CF4                	movlw	244
-   184  1AD  029                	movwf	Delay_ms@DELAY_CNT
-   185  1AE  C01                	movlw	1
-   186  1AF  02A                	movwf	Delay_ms@DELAY_CNT+1
-   187  1B0  905                	fcall	entry__Delay_ms
-   188  1B1                     L1:	
-   189  1B1  446                	bcf	6,2	;volatile
-   190  1B2  526                	bsf	6,1	;volatile
-   191  1B3                     l547:	
-   192                           ;main3.c: 40: while(1) {
-   193                           
-   194                           
-   195                           ;main3.c: 42: if((width > 0)&&(GP3 == 0)) {
-   196  1B3  213                	movf	main@width+1,w
-   197  1B4  03F                	movwf	31
-   198  1B5  212                	movf	main@width,w
-   199  1B6  03E                	movwf	30
-   200  1B7  21F                	movf	31,w
-   201  1B8  F80                	xorlw	128
-   202  1B9  03C                	movwf	28
-   203  1BA  C80                	movlw	128
-   204  1BB  09C                	subwf	28,w
-   205  1BC  743                	skipz
-   206  1BD  BC0                	goto	u105
-   207  1BE  C01                	movlw	1
-   208  1BF  09E                	subwf	30,w
-   209  1C0                     u105:	
-   210  1C0  603                	btfsc	3,0
-   211  1C1  666                	btfsc	6,3	;volatile
-   212  1C2  BCE                	goto	l559
-   213                           
-   214                           ;main3.c: 43: max_width = width;
-   215  1C3  213                	movf	main@width+1,w
-   216  1C4  071                	clrf	main@max_width+1
-   217  1C5  1F1                	addwf	main@max_width+1,f
-   218  1C6  212                	movf	main@width,w
-   219  1C7  070                	clrf	main@max_width
-   220  1C8  1F0                	addwf	main@max_width,f
+   145                           ;main3.c: 29: int max_width = 0;
+   146  160  072                	clrf	main@max_width
+   147  161  073                	clrf	main@max_width+1
+   148                           
+   149                           ;main3.c: 31: OPTION = 0b11000000;
+   150  162  CC0                	movlw	192
+   151  163  002                	option
+   152                           
+   153                           ;main3.c: 33: TRISGPIO = 0b1000;
+   154  164  C08                	movlw	8
+   155  165  006                	tris	6
+   156                           
+   157                           ;main3.c: 34: ANS0 = 1;
+   158  166  5C7                	bsf	7,6	;volatile
+   159                           
+   160                           ;main3.c: 35: ANS1 = 0;
+   161  167  4E7                	bcf	7,7	;volatile
+   162                           
+   163                           ;main3.c: 36: CHS1 = 0; CHS0 = 0;
+   164  168  467                	bcf	7,3	;volatile
+   165  169  447                	bcf	7,2	;volatile
+   166                           
+   167                           ;main3.c: 37: ADON = 1;
+   168  16A  507                	bsf	7,0	;volatile
+   169                           
+   170                           ;main3.c: 39: GP2 = 0; GP1 = 0;
+   171  16B  446                	bcf	6,2	;volatile
+   172  16C  426                	bcf	6,1	;volatile
+   173                           
+   174                           ;main3.c: 40: Delay_ms(1000);
+   175  16D  CE8                	movlw	232
+   176  16E  029                	movwf	Delay_ms@DELAY_CNT
+   177  16F  C03                	movlw	3
+   178  170  02A                	movwf	Delay_ms@DELAY_CNT+1
+   179  171  906                	fcall	entry__Delay_ms
+   180  172                     l550:	
+   181                           ;main3.c: 42: while(1) {
+   182                           
+   183                           
+   184                           ;main3.c: 44: if((width > 0)&&(GP3 == 0)) {
+   185  172  211                	movf	main@width+1,w
+   186  173  03F                	movwf	31
+   187  174  210                	movf	main@width,w
+   188  175  03E                	movwf	30
+   189  176  21F                	movf	31,w
+   190  177  F80                	xorlw	128
+   191  178  03C                	movwf	28
+   192  179  C80                	movlw	128
+   193  17A  09C                	subwf	28,w
+   194  17B  743                	skipz
+   195  17C  B7F                	goto	u175
+   196  17D  C01                	movlw	1
+   197  17E  09E                	subwf	30,w
+   198  17F                     u175:	
+   199  17F  603                	btfsc	3,0
+   200  180  666                	btfsc	6,3	;volatile
+   201  181  B94                	goto	l562
+   202                           
+   203                           ;main3.c: 45: max_width = width - 110;
+   204  182  211                	movf	main@width+1,w
+   205  183  03D                	movwf	29
+   206  184  210                	movf	main@width,w
+   207  185  03C                	movwf	28
+   208  186  C92                	movlw	146
+   209  187  1DC                	addwf	28,w
+   210  188  032                	movwf	main@max_width
+   211  189  21D                	movf	29,w
+   212  18A  033                	movwf	main@max_width+1
+   213  18B  603                	skipnc
+   214  18C  2B3                	incf	main@max_width+1,f
+   215  18D  CFF                	movlw	255
+   216  18E  1F3                	addwf	main@max_width+1,f
+   217                           
+   218                           ;main3.c: 46: width = 0;
+   219  18F  070                	clrf	main@width
+   220  190  071                	clrf	main@width+1
    221                           
-   222                           ;main3.c: 44: width = 0;
-   223  1C9  072                	clrf	main@width
-   224  1CA  073                	clrf	main@width+1
-   225                           
-   226                           ;main3.c: 45: GO = 1;
-   227  1CB  527                	bsf	7,1	;volatile
-   228  1CC                     l557:	
-   229                           ;main3.c: 46: while(nDONE);
+   222                           ;main3.c: 47: GO = 1;
+   223  191  527                	bsf	7,1	;volatile
+   224  192                     l560:	
+   225                           ;main3.c: 48: while(nDONE);
+   226                           
+   227  192  627                	btfsc	7,1	;volatile
+   228  193  B92                	goto	l560
+   229  194                     l562:	
    230                           
-   231  1CC  627                	btfsc	7,1	;volatile
-   232  1CD  BCC                	goto	l557
-   233  1CE                     l559:	
-   234                           
-   235                           ;main3.c: 47: };
-   236                           ;main3.c: 49: if((width == 0)&&(GP3 == 1)) {
-   237  1CE  213                	movf	main@width+1,w
-   238  1CF  112                	iorwf	main@width,w
-   239  1D0  743                	skipz
-   240  1D1  BE0                	goto	l569
-   241  1D2  666                	btfsc	6,3	;volatile
-   242  1D3  BDE                	goto	l567
-   243  1D4  BE0                	goto	l569
-   244  1D5                     l565:	
-   245                           ;main3.c: 50: while(GP3) width++;
-   246                           
-   247  1D5  C01                	movlw	1
-   248  1D6  03C                	movwf	28
-   249  1D7  07D                	clrf	29
-   250  1D8  21C                	movf	28,w
-   251  1D9  1F2                	addwf	main@width,f
-   252  1DA  603                	skipnc
-   253  1DB  2B3                	incf	main@width+1,f
-   254  1DC  21D                	movf	29,w
-   255  1DD  1F3                	addwf	main@width+1,f
-   256  1DE                     l567:	
-   257  1DE  666                	btfsc	6,3	;volatile
-   258  1DF  BD5                	goto	l565
-   259  1E0                     l569:	
-   260                           
-   261                           ;main3.c: 51: };
-   262                           ;main3.c: 53: if(ADRES > max_width - 120){
-   263  1E0  208                	movf	8,w	;volatile
-   264  1E1  03C                	movwf	28
-   265  1E2  07D                	clrf	29
-   266  1E3  211                	movf	main@max_width+1,w
-   267  1E4  03F                	movwf	31
-   268  1E5  210                	movf	main@max_width,w
-   269  1E6  03E                	movwf	30
-   270  1E7  C88                	movlw	136
-   271  1E8  1DE                	addwf	30,w
-   272  1E9  03E                	movwf	30
-   273  1EA  21F                	movf	31,w
-   274  1EB  03F                	movwf	31
-   275  1EC  603                	skipnc
-   276  1ED  2BF                	incf	31,f
-   277  1EE  CFF                	movlw	255
-   278  1EF  1FF                	addwf	31,f
-   279  1F0  21F                	movf	31,w
-   280  1F1  F80                	xorlw	128
-   281  1F2  02F                	movwf	??_main
-   282  1F3  21D                	movf	29,w
-   283  1F4  F80                	xorlw	128
-   284  1F5  08F                	subwf	??_main,w
-   285  1F6  743                	skipz
-   286  1F7  BFA                	goto	u165
-   287  1F8  21C                	movf	28,w
-   288  1F9  09E                	subwf	30,w
-   289  1FA                     u165:	
-   290  1FA  603                	skipnc
-   291  1FB  BB1                	goto	L1
-   292                           
-   293                           ;main3.c: 54: GP2 = 1; GP1 = 0;
-   294  1FC  546                	bsf	6,2	;volatile
-   295  1FD  426                	bcf	6,1	;volatile
-   296                           
-   297                           ;main3.c: 55: } else {
-   298  1FE  BB3                	goto	l547
-   299  1FF                     __end_of_main:	
-   300                           ;main3.c: 57: };
-   301                           
-   302                           ;main3.c: 56: GP2 = 0; GP1 = 1;
-   303                           
-   304                           
-   305                           	psect	text1
-   306  169                     __ptext1:	
-   307 ;; *************** function _Delay_ms *****************
-   308 ;; Defined at:
-   309 ;;		line 15 in file "main3.c"
-   310 ;; Parameters:    Size  Location     Type
-   311 ;;  DELAY_CNT       2    0[BANK0 ] unsigned int 
-   312 ;; Auto vars:     Size  Location     Type
-   313 ;;  i               2    4[BANK0 ] unsigned int 
-   314 ;; Return value:  Size  Location     Type
-   315 ;;		None               void
-   316 ;; Registers used:
-   317 ;;		wreg, fsr0l, fsr0h, status,2, btemp+0, btemp+1
-   318 ;; Tracked objects:
-   319 ;;		On entry : 0/0
-   320 ;;		On exit  : 0/0
-   321 ;;		Unchanged: 0/0
-   322 ;; Data sizes:     COMMON   BANK0
-   323 ;;      Params:         0       2
-   324 ;;      Locals:         0       2
-   325 ;;      Temps:          0       2
-   326 ;;      Totals:         0       6
-   327 ;;Total ram usage:        6 bytes
-   328 ;; Hardware stack levels used:    1
-   329 ;; This function calls:
-   330 ;;		Nothing
-   331 ;; This function is called by:
-   332 ;;		_main
-   333 ;; This function uses a non-reentrant model
-   334 ;;
-   335                           
-   336                           
-   337                           ;psect for function _Delay_ms
-   338  169                     _Delay_ms:	
-   339                           
-   340                           ;main3.c: 16: for (unsigned int i = 0; i < DELAY_CNT; i++) {
-   341  169  06D                	clrf	Delay_ms@i
-   342  16A  06E                	clrf	Delay_ms@i+1
-   343  16B                     l505:	
-   344  16B  20A                	movf	Delay_ms@DELAY_CNT+1,w
-   345  16C  03D                	movwf	29
-   346  16D  209                	movf	Delay_ms@DELAY_CNT,w
-   347  16E  03C                	movwf	28
-   348  16F  21D                	movf	29,w
-   349  170  08E                	subwf	Delay_ms@i+1,w
-   350  171  743                	skipz
-   351  172  B75                	goto	u95
-   352  173  21C                	movf	28,w
-   353  174  08D                	subwf	Delay_ms@i,w
-   354  175                     u95:	
-   355  175  603                	btfsc	3,0
-   356  176  800                	retlw	0
-   357                           
-   358                           ;main3.c: 17: _delay((unsigned long)((1)*(8000000/4000.0)));
-   359  177  C03                	movlw	3
-   360  178  02C                	movwf	??_Delay_ms+1
-   361  179  C97                	movlw	151
-   362  17A  02B                	movwf	??_Delay_ms
-   363  17B                     u177:	
-   364  17B  2EB                	decfsz	??_Delay_ms,f
-   365  17C  B7B                	goto	u177
-   366  17D  2EC                	decfsz	??_Delay_ms+1,f
-   367  17E  B7B                	goto	u177
-   368  17F  B80                	nop2
-   369  180  C01                	movlw	1
-   370  181  03C                	movwf	28
-   371  182  07D                	clrf	29
-   372  183  21C                	movf	28,w
-   373  184  1ED                	addwf	Delay_ms@i,f
-   374  185  603                	skipnc
-   375  186  2AE                	incf	Delay_ms@i+1,f
-   376  187  21D                	movf	29,w
-   377  188  1EE                	addwf	Delay_ms@i+1,f
-   378  189  B6B                	goto	l505
-   379  18A                     __end_of_Delay_ms:	
-   380  001C                     btemp	set	28	;btemp
-   381  001C                     wtemp	set	28
-   382  001C                     wtemp0	set	28
-   383  001E                     wtemp1	set	30
-   384  0020                     wtemp2	set	32
-   385  0022                     wtemp3	set	34
-   386  0024                     wtemp4	set	36
-   387  0026                     wtemp5	set	38
-   388  001D                     wtemp6	set	29
-   389  001C                     ttemp	set	28
-   390  001C                     ttemp0	set	28
-   391  001F                     ttemp1	set	31
-   392  0022                     ttemp2	set	34
-   393  0025                     ttemp3	set	37
-   394  001D                     ttemp4	set	29
-   395  001C                     ltemp	set	28
-   396  001C                     ltemp0	set	28
-   397  0020                     ltemp1	set	32
-   398  0024                     ltemp2	set	36
-   399  001E                     ltemp3	set	30
-   400                           
-   401                           	psect	jmp_tab
-   402  005                     __pjmp_tab:	
-   403                           ;incstack = 0
-   404                           ; Regs used in _Delay_ms: [wreg-fsr0h+status,2+btemp+0+btemp+1]
+   231                           ;main3.c: 49: };
+   232                           ;main3.c: 51: if((width == 0)&&(GP3 == 1)) {
+   233  194  211                	movf	main@width+1,w
+   234  195  110                	iorwf	main@width,w
+   235  196  743                	skipz
+   236  197  BA6                	goto	l572
+   237  198  666                	btfsc	6,3	;volatile
+   238  199  BA4                	goto	l570
+   239  19A  BA6                	goto	l572
+   240  19B                     l568:	
+   241                           ;main3.c: 52: while(GP3) width++;
+   242                           
+   243  19B  C01                	movlw	1
+   244  19C  03C                	movwf	28
+   245  19D  07D                	clrf	29
+   246  19E  21C                	movf	28,w
+   247  19F  1F0                	addwf	main@width,f
+   248  1A0  603                	skipnc
+   249  1A1  2B1                	incf	main@width+1,f
+   250  1A2  21D                	movf	29,w
+   251  1A3  1F1                	addwf	main@width+1,f
+   252  1A4                     l570:	
+   253  1A4  666                	btfsc	6,3	;volatile
+   254  1A5  B9B                	goto	l568
+   255  1A6                     l572:	
+   256                           
+   257                           ;main3.c: 53: };
+   258                           ;main3.c: 55: if((35 <= max_width)&&(max_width < 240)) {
+   259  1A6  213                	movf	main@max_width+1,w
+   260  1A7  03F                	movwf	31
+   261  1A8  212                	movf	main@max_width,w
+   262  1A9  03E                	movwf	30
+   263  1AA  21F                	movf	31,w
+   264  1AB  F80                	xorlw	128
+   265  1AC  03C                	movwf	28
+   266  1AD  C80                	movlw	128
+   267  1AE  09C                	subwf	28,w
+   268  1AF  743                	skipz
+   269  1B0  BB3                	goto	u235
+   270  1B1  C23                	movlw	35
+   271  1B2  09E                	subwf	30,w
+   272  1B3                     u235:	
+   273  1B3  703                	skipc
+   274  1B4  BFC                	goto	l586
+   275  1B5  213                	movf	main@max_width+1,w
+   276  1B6  03F                	movwf	31
+   277  1B7  212                	movf	main@max_width,w
+   278  1B8  03E                	movwf	30
+   279  1B9  21F                	movf	31,w
+   280  1BA  F80                	xorlw	128
+   281  1BB  03C                	movwf	28
+   282  1BC  C80                	movlw	128
+   283  1BD  09C                	subwf	28,w
+   284  1BE  743                	skipz
+   285  1BF  BC2                	goto	u245
+   286  1C0  CF0                	movlw	240
+   287  1C1  09E                	subwf	30,w
+   288  1C2                     u245:	
+   289  1C2  603                	skipnc
+   290  1C3  BFC                	goto	l586
+   291                           
+   292                           ;main3.c: 56: if(abs(ADRES - max_width) > 5) {
+   293  1C4  252                	comf	main@max_width,w
+   294  1C5  03C                	movwf	28
+   295  1C6  253                	comf	main@max_width+1,w
+   296  1C7  03D                	movwf	29
+   297  1C8  2BC                	incf	28,f
+   298  1C9  643                	skipnz
+   299  1CA  2BD                	incf	29,f
+   300  1CB  208                	movf	8,w	;volatile
+   301  1CC  1DC                	addwf	28,w
+   302  1CD  029                	movwf	abs@t
+   303  1CE  21D                	movf	29,w
+   304  1CF  603                	skipnc
+   305  1D0  29D                	incf	29,w
+   306  1D1  02A                	movwf	abs@t+1
+   307  1D2  905                	fcall	entry__abs
+   308  1D3  209                	movf	?_abs,w
+   309  1D4  03E                	movwf	30
+   310  1D5  20A                	movf	?_abs+1,w
+   311  1D6  03F                	movwf	31
+   312  1D7  21F                	movf	31,w
+   313  1D8  F80                	xorlw	128
+   314  1D9  03C                	movwf	28
+   315  1DA  C80                	movlw	128
+   316  1DB  09C                	subwf	28,w
+   317  1DC  743                	skipz
+   318  1DD  BE0                	goto	u255
+   319  1DE  C06                	movlw	6
+   320  1DF  09E                	subwf	30,w
+   321  1E0                     u255:	
+   322  1E0  703                	skipc
+   323  1E1  BF9                	goto	l584
+   324                           
+   325                           ;main3.c: 57: if(ADRES > max_width){
+   326  1E2  208                	movf	8,w	;volatile
+   327  1E3  03C                	movwf	28
+   328  1E4  07D                	clrf	29
+   329  1E5  213                	movf	main@max_width+1,w
+   330  1E6  03F                	movwf	31
+   331  1E7  212                	movf	main@max_width,w
+   332  1E8  03E                	movwf	30
+   333  1E9  21F                	movf	31,w
+   334  1EA  F80                	xorlw	128
+   335  1EB  02F                	movwf	??_main
+   336  1EC  21D                	movf	29,w
+   337  1ED  F80                	xorlw	128
+   338  1EE  08F                	subwf	??_main,w
+   339  1EF  743                	skipz
+   340  1F0  BF3                	goto	u265
+   341  1F1  21C                	movf	28,w
+   342  1F2  09E                	subwf	30,w
+   343  1F3                     u265:	
+   344  1F3  603                	skipnc
+   345  1F4  BF7                	goto	l582
+   346                           
+   347                           ;main3.c: 58: GP2 = 1; GP1 = 0;
+   348  1F5  546                	bsf	6,2	;volatile
+   349  1F6  BFA                	goto	L1
+   350  1F7                     l582:	
+   351                           ;main3.c: 59: } else {
+   352                           
+   353                           
+   354                           ;main3.c: 60: GP2 = 0; GP1 = 1;
+   355  1F7  446                	bcf	6,2	;volatile
+   356  1F8  BFD                	goto	L2
+   357  1F9                     l584:	
+   358                           ;main3.c: 61: };
+   359                           ;main3.c: 62: } else {GP2 = 0; GP1 = 0;};
+   360                           
+   361  1F9  446                	bcf	6,2	;volatile
+   362  1FA                     L1:	
+   363  1FA  426                	bcf	6,1	;volatile
+   364                           
+   365                           ;main3.c: 63: } else {GP2 = 1; GP1 = 1;};
+   366  1FB  B72                	goto	l550
+   367  1FC                     l586:	
+   368  1FC  546                	bsf	6,2	;volatile
+   369  1FD                     L2:	
+   370  1FD  526                	bsf	6,1	;volatile
+   371  1FE  B72                	goto	l550
+   372  1FF                     __end_of_main:	
+   373                           
+   374                           	psect	text1
+   375  12C                     __ptext1:	
+   376 ;; *************** function _abs *****************
+   377 ;; Defined at:
+   378 ;;		line 21 in file "main3.c"
+   379 ;; Parameters:    Size  Location     Type
+   380 ;;  t               2    0[BANK0 ] int 
+   381 ;; Auto vars:     Size  Location     Type
+   382 ;;		None
+   383 ;; Return value:  Size  Location     Type
+   384 ;;                  2    0[BANK0 ] int 
+   385 ;; Registers used:
+   386 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+0, btemp+1
+   387 ;; Tracked objects:
+   388 ;;		On entry : 0/0
+   389 ;;		On exit  : 0/0
+   390 ;;		Unchanged: 0/0
+   391 ;; Data sizes:     COMMON   BANK0
+   392 ;;      Params:         0       2
+   393 ;;      Locals:         0       0
+   394 ;;      Temps:          0       0
+   395 ;;      Totals:         0       2
+   396 ;;Total ram usage:        2 bytes
+   397 ;; Hardware stack levels used:    1
+   398 ;; This function calls:
+   399 ;;		Nothing
+   400 ;; This function is called by:
+   401 ;;		_main
+   402 ;; This function uses a non-reentrant model
+   403 ;;
+   404                           
    405                           
-   406  005                     entry__Delay_ms:	
-   407  005  B69                	ljmp	_Delay_ms
+   406                           ;psect for function _abs
+   407  12C                     _abs:	
+   408                           
+   409                           ;main3.c: 22: if(t < 0 ) return -t;
+   410  12C  7EA                	btfss	abs@t+1,7
+   411  12D  B3A                	goto	l524
+   412  12E  249                	comf	abs@t,w
+   413  12F  03C                	movwf	28
+   414  130  24A                	comf	abs@t+1,w
+   415  131  03D                	movwf	29
+   416  132  2BC                	incf	28,f
+   417  133  643                	skipnz
+   418  134  2BD                	incf	29,f
+   419  135  21C                	movf	28,w
+   420  136  029                	movwf	?_abs
+   421  137  21D                	movf	29,w
+   422  138  02A                	movwf	?_abs+1
+   423  139  800                	retlw	0
+   424  13A                     l524:	
+   425                           
+   426                           ;main3.c: 23: if(t >= 0) return t;
+   427  13A  6EA                	btfsc	abs@t+1,7
+   428  13B  800                	retlw	0
+   429  13C  800                	retlw	0
+   430  13D                     __end_of_abs:	
+   431                           
+   432                           	psect	jmp_tab
+   433  005                     __pjmp_tab:	
+   434                           ;incstack = 0
+   435                           ; Regs used in _abs: [wreg-fsr0h+status,2-btemp+1]
+   436                           
+   437  005                     entry__abs:	
+   438  005  B2C                	ljmp	_abs
+   439  006                     entry__Delay_ms:	
+   440                           ;incstack = 0
+   441                           ; Regs used in _Delay_ms: [wreg-fsr0h+status,2+btemp+0+btemp+1]
+   442                           
+   443  006  B3D                	ljmp	_Delay_ms
+   444                           
+   445                           	psect	text2
+   446  13D                     __ptext2:	
+   447 ;; *************** function _Delay_ms *****************
+   448 ;; Defined at:
+   449 ;;		line 15 in file "main3.c"
+   450 ;; Parameters:    Size  Location     Type
+   451 ;;  DELAY_CNT       2    0[BANK0 ] unsigned int 
+   452 ;; Auto vars:     Size  Location     Type
+   453 ;;  i               2    4[BANK0 ] unsigned int 
+   454 ;; Return value:  Size  Location     Type
+   455 ;;		None               void
+   456 ;; Registers used:
+   457 ;;		wreg, fsr0l, fsr0h, status,2, btemp+0, btemp+1
+   458 ;; Tracked objects:
+   459 ;;		On entry : 0/0
+   460 ;;		On exit  : 0/0
+   461 ;;		Unchanged: 0/0
+   462 ;; Data sizes:     COMMON   BANK0
+   463 ;;      Params:         0       2
+   464 ;;      Locals:         0       2
+   465 ;;      Temps:          0       2
+   466 ;;      Totals:         0       6
+   467 ;;Total ram usage:        6 bytes
+   468 ;; Hardware stack levels used:    1
+   469 ;; This function calls:
+   470 ;;		Nothing
+   471 ;; This function is called by:
+   472 ;;		_main
+   473 ;; This function uses a non-reentrant model
+   474 ;;
+   475                           
+   476                           
+   477                           ;psect for function _Delay_ms
+   478  13D                     _Delay_ms:	
+   479                           
+   480                           ;main3.c: 16: for (unsigned int i = 0; i < DELAY_CNT; i++) {
+   481  13D  06D                	clrf	Delay_ms@i
+   482  13E  06E                	clrf	Delay_ms@i+1
+   483  13F                     l516:	
+   484  13F  20A                	movf	Delay_ms@DELAY_CNT+1,w
+   485  140  03D                	movwf	29
+   486  141  209                	movf	Delay_ms@DELAY_CNT,w
+   487  142  03C                	movwf	28
+   488  143  21D                	movf	29,w
+   489  144  08E                	subwf	Delay_ms@i+1,w
+   490  145  743                	skipz
+   491  146  B49                	goto	u145
+   492  147  21C                	movf	28,w
+   493  148  08D                	subwf	Delay_ms@i,w
+   494  149                     u145:	
+   495  149  603                	btfsc	3,0
+   496  14A  800                	retlw	0
+   497                           
+   498                           ;main3.c: 17: _delay((unsigned long)((1)*(8000000/4000.0)));
+   499  14B  C03                	movlw	3
+   500  14C  02C                	movwf	??_Delay_ms+1
+   501  14D  C97                	movlw	151
+   502  14E  02B                	movwf	??_Delay_ms
+   503  14F                     u277:	
+   504  14F  2EB                	decfsz	??_Delay_ms,f
+   505  150  B4F                	goto	u277
+   506  151  2EC                	decfsz	??_Delay_ms+1,f
+   507  152  B4F                	goto	u277
+   508  153  B54                	nop2
+   509  154  C01                	movlw	1
+   510  155  03C                	movwf	28
+   511  156  07D                	clrf	29
+   512  157  21C                	movf	28,w
+   513  158  1ED                	addwf	Delay_ms@i,f
+   514  159  603                	skipnc
+   515  15A  2AE                	incf	Delay_ms@i+1,f
+   516  15B  21D                	movf	29,w
+   517  15C  1EE                	addwf	Delay_ms@i+1,f
+   518  15D  B3F                	goto	l516
+   519  15E                     __end_of_Delay_ms:	
+   520  001C                     btemp	set	28	;btemp
+   521  001C                     wtemp	set	28
+   522  001C                     wtemp0	set	28
+   523  001E                     wtemp1	set	30
+   524  0020                     wtemp2	set	32
+   525  0022                     wtemp3	set	34
+   526  0024                     wtemp4	set	36
+   527  0026                     wtemp5	set	38
+   528  001D                     wtemp6	set	29
+   529  001C                     ttemp	set	28
+   530  001C                     ttemp0	set	28
+   531  001F                     ttemp1	set	31
+   532  0022                     ttemp2	set	34
+   533  0025                     ttemp3	set	37
+   534  001D                     ttemp4	set	29
+   535  001C                     ltemp	set	28
+   536  001C                     ltemp0	set	28
+   537  0020                     ltemp1	set	32
+   538  0024                     ltemp2	set	36
+   539  001E                     ltemp3	set	30
 
 
 Data Sizes:
@@ -443,11 +575,15 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
  ---------------------------------------------------------------------------------
- (0) _main                                                 5     5      0     311
+ (0) _main                                                 5     5      0     379
                                               6 BANK0      5     5      0
                            _Delay_ms
+                                _abs
  ---------------------------------------------------------------------------------
- (1) _Delay_ms                                             6     4      2     218
+ (1) _abs                                                  2     0      2     131
+                                              0 BANK0      2     0      2
+ ---------------------------------------------------------------------------------
+ (1) _Delay_ms                                             6     4      2      89
                                               0 BANK0      6     4      2
  ---------------------------------------------------------------------------------
  Estimated maximum stack depth 1
@@ -457,6 +593,7 @@ Call Graph Tables:
 
  _main (ROOT)
    _Delay_ms
+   _abs
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
@@ -474,31 +611,36 @@ ABS                  0      0       0       6        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.33 build 59893 
-Symbol Table                                                                                   Thu Oct 27 05:39:07 2016
+Symbol Table                                                                                   Thu Oct 27 11:29:47 2016
 
-            __CFG_CP$OFF 0000                       _GO 0039                       u95 0175  
-                     fsr 0004                      l505 016B                      l547 01B3  
-                    l565 01D5                      l557 01CC                      l567 01DE  
-                    l559 01CE                      l569 01E0                      _GP1 0031  
-                    _GP2 0032                      _GP3 0033                      u105 01C0  
-                    u165 01FA                      u177 017B                     _ADON 0038  
+            __CFG_CP$OFF 0000                       _GO 0039                       fsr 0004  
+                    l516 013F                      l524 013A                      l550 0172  
+                    l560 0192                      l570 01A4                      l562 0194  
+                    l572 01A6                      l582 01F7                      l584 01F9  
+                    l568 019B                      l586 01FC                      _GP1 0031  
+                    _GP2 0032                      _GP3 0033                      u145 0149  
+                    u235 01B3                      u245 01C2                      u255 01E0  
+                    u175 017F                      u265 01F3                      u277 014F  
+                    _abs 012C                     ?_abs 0009                     _ADON 0038  
                    _CHS0 003A                     _CHS1 003B                     _ANS0 003E  
-                   _ANS1 003F                     _main 018A                     btemp 001C  
-                   ltemp 001C                     start 0002                     ttemp 001C  
-                   wtemp 001C            __CFG_MCPU$OFF 0000                    ?_main 0009  
-                  _ADRES 0008            __CFG_WDTE$OFF 0000                    _nDONE 0039  
-                  ltemp0 001C                    ltemp1 0020                    ltemp2 0024  
-                  ltemp3 001E                    ttemp0 001C                    ttemp1 001F  
-                  ttemp2 0022                    ttemp3 0025                    ttemp4 001D  
-                  wtemp0 001C                    wtemp1 001E                    wtemp2 0020  
-                  wtemp3 0022                    wtemp4 0024                    wtemp5 0026  
-                  wtemp6 001D        Delay_ms@DELAY_CNT 0009         __end_of_Delay_ms 018A  
-         __CFG_MCLRE$OFF 0000          __initialization 0003             __end_of_main 01FF  
-                 ??_main 000F                   _OPTION 0000            main@max_width 0010  
-__end_of__initialization 0003                ?_Delay_ms 0009               __pmaintext 018A  
-             ??_Delay_ms 000B                  __ptext0 0000                  __ptext1 0169  
-   end_of_initialization 0003                Delay_ms@i 000D      start_initialization 0003  
-       __CFG_IOSCFS$8MHZ 0000        __size_of_Delay_ms 0021           entry__Delay_ms 0005  
+                   _ANS1 003F                     abs@t 0009                     _main 015E  
+                   btemp 001C                     ltemp 001C                     start 0002  
+                   ttemp 001C                     wtemp 001C            __CFG_MCPU$OFF 0000  
+                  ??_abs 0000                    ?_main 0009                    _ADRES 0008  
+          __CFG_WDTE$OFF 0000                    _nDONE 0039                    ltemp0 001C  
+                  ltemp1 0020                    ltemp2 0024                    ltemp3 001E  
+                  ttemp0 001C                    ttemp1 001F                    ttemp2 0022  
+                  ttemp3 0025                    ttemp4 001D                    wtemp0 001C  
+                  wtemp1 001E                    wtemp2 0020                    wtemp3 0022  
+                  wtemp4 0024                    wtemp5 0026                    wtemp6 001D  
+      Delay_ms@DELAY_CNT 0009         __end_of_Delay_ms 015E           __CFG_MCLRE$OFF 0000  
+        __initialization 0003             __end_of_main 01FF                   ??_main 000F  
+                 _OPTION 0000            main@max_width 0012  __end_of__initialization 0003  
+         __pcstackCOMMON 0000                ?_Delay_ms 0009               __pmaintext 015E  
+             ??_Delay_ms 000B                  __ptext0 0000                  __ptext1 012C  
+                __ptext2 013D             __size_of_abs 0011     end_of_initialization 0003  
+              Delay_ms@i 000D      start_initialization 0003              __end_of_abs 013D  
+       __CFG_IOSCFS$8MHZ 0000        __size_of_Delay_ms 0021           entry__Delay_ms 0006  
               ___latbits 0000            __pcstackBANK0 0009                __pjmp_tab 0005  
-               _TRISGPIO 0006                main@width 0012                 _Delay_ms 0169  
-          __size_of_main 0075  
+               _TRISGPIO 0006                main@width 0010                 _Delay_ms 013D  
+              entry__abs 0005            __size_of_main 00A1  

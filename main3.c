@@ -18,6 +18,11 @@ static void Delay_ms(unsigned int DELAY_CNT) {
     }
 }
 
+static int abs(int t) {
+    if(t < 0 ) return -t;
+    if(t >= 0) return t;
+}
+
 void main(void) {
     
     int width = 0;
@@ -31,16 +36,13 @@ void main(void) {
     CHS1 = 0; CHS0 = 0; // select ADC Chanel 00
     ADON = 1;   // turn ADC on
   
- 
-    Delay_ms(500); GP2 = 1; GP1 = 0;
-    Delay_ms(500); GP2 = 0; GP1 = 1;
-    Delay_ms(500); GP2 = 1; GP1 = 0;
-    Delay_ms(500); GP2 = 0; GP1 = 1;
+    GP2 = 0; GP1 = 0;
+    Delay_ms(1000);
      
     while(1) {
         
         if((width > 0)&&(GP3 == 0)) {
-            max_width = width;
+            max_width = width - 110;
             width = 0;
             GO = 1; // start conversion
             while(nDONE);  // wait conversion
@@ -49,13 +51,17 @@ void main(void) {
         if((width == 0)&&(GP3 == 1)) {
             while(GP3) width++;
         };
-                        
-        if(ADRES > max_width - 120){
-            GP2 = 1; GP1 = 0;
-        } else {
-            GP2 = 0; GP1 = 1;
-        };
-
+                   
+        if((35 <= max_width)&&(max_width < 240)) {
+            if(abs(ADRES - max_width) > 5) {
+                if(ADRES > max_width){
+                    GP2 = 1; GP1 = 0;
+                } else {
+                    GP2 = 0; GP1 = 1;
+                };
+            } else {GP2 = 0; GP1 = 0;};
+         } else {GP2 = 1; GP1 = 1;};
+        
     };
 }
 

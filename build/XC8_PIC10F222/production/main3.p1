@@ -287,132 +287,170 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 25 ]
 }
 "21
+[v _abs `(i ~T0 @X0 1 sf1`i ]
+{
+[; ;main3.c: 21: static int abs(int t) {
+[e :U _abs ]
+[v _t `i ~T0 @X0 1 r1 ]
+[f ]
+[; ;main3.c: 22: if(t < 0 ) return -t;
+"22
+[e $ ! < _t -> 0 `i 31  ]
+[e ) -U _t ]
+[e $UE 30  ]
+[e :U 31 ]
+[; ;main3.c: 23: if(t >= 0) return t;
+"23
+[e $ ! >= _t -> 0 `i 32  ]
+[e ) _t ]
+[e $UE 30  ]
+[e :U 32 ]
+[; ;main3.c: 24: }
+"24
+[e :UE 30 ]
+}
+"26
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main3.c: 21: void main(void) {
+[; ;main3.c: 26: void main(void) {
 [e :U _main ]
 [f ]
-"23
-[v _width `i ~T0 @X0 1 a ]
-[; ;main3.c: 23: int width = 0;
-[e = _width -> 0 `i ]
-"24
-[v _max_width `i ~T0 @X0 1 a ]
-[; ;main3.c: 24: int max_width = 0;
-[e = _max_width -> 0 `i ]
-[; ;main3.c: 26: OPTION = 0b11000000;
-"26
-[e = _OPTION -> -> 192 `i `uc ]
-[; ;main3.c: 28: TRISGPIO = 0b1000;
 "28
-[e = _TRISGPIO -> -> 8 `i `uc ]
-[; ;main3.c: 29: ANS0 = 1;
+[v _width `i ~T0 @X0 1 a ]
+[; ;main3.c: 28: int width = 0;
+[e = _width -> 0 `i ]
 "29
-[e = _ANS0 -> -> 1 `i `b ]
-[; ;main3.c: 30: ANS1 = 0;
-"30
-[e = _ANS1 -> -> 0 `i `b ]
-[; ;main3.c: 31: CHS1 = 0; CHS0 = 0;
+[v _max_width `i ~T0 @X0 1 a ]
+[; ;main3.c: 29: int max_width = 0;
+[e = _max_width -> 0 `i ]
+[; ;main3.c: 31: OPTION = 0b11000000;
 "31
+[e = _OPTION -> -> 192 `i `uc ]
+[; ;main3.c: 33: TRISGPIO = 0b1000;
+"33
+[e = _TRISGPIO -> -> 8 `i `uc ]
+[; ;main3.c: 34: ANS0 = 1;
+"34
+[e = _ANS0 -> -> 1 `i `b ]
+[; ;main3.c: 35: ANS1 = 0;
+"35
+[e = _ANS1 -> -> 0 `i `b ]
+[; ;main3.c: 36: CHS1 = 0; CHS0 = 0;
+"36
 [e = _CHS1 -> -> 0 `i `b ]
 [e = _CHS0 -> -> 0 `i `b ]
-[; ;main3.c: 32: ADON = 1;
-"32
-[e = _ADON -> -> 1 `i `b ]
-[; ;main3.c: 35: Delay_ms(500); GP2 = 1; GP1 = 0;
-"35
-[e ( _Delay_ms (1 -> -> 500 `i `ui ]
-[e = _GP2 -> -> 1 `i `b ]
-[e = _GP1 -> -> 0 `i `b ]
-[; ;main3.c: 36: Delay_ms(500); GP2 = 0; GP1 = 1;
-"36
-[e ( _Delay_ms (1 -> -> 500 `i `ui ]
-[e = _GP2 -> -> 0 `i `b ]
-[e = _GP1 -> -> 1 `i `b ]
-[; ;main3.c: 37: Delay_ms(500); GP2 = 1; GP1 = 0;
+[; ;main3.c: 37: ADON = 1;
 "37
-[e ( _Delay_ms (1 -> -> 500 `i `ui ]
-[e = _GP2 -> -> 1 `i `b ]
-[e = _GP1 -> -> 0 `i `b ]
-[; ;main3.c: 38: Delay_ms(500); GP2 = 0; GP1 = 1;
-"38
-[e ( _Delay_ms (1 -> -> 500 `i `ui ]
+[e = _ADON -> -> 1 `i `b ]
+[; ;main3.c: 39: GP2 = 0; GP1 = 0;
+"39
 [e = _GP2 -> -> 0 `i `b ]
-[e = _GP1 -> -> 1 `i `b ]
-[; ;main3.c: 40: while(1) {
+[e = _GP1 -> -> 0 `i `b ]
+[; ;main3.c: 40: Delay_ms(1000);
 "40
-[e :U 32 ]
-{
-[; ;main3.c: 42: if((width > 0)&&(GP3 == 0)) {
+[e ( _Delay_ms (1 -> -> 1000 `i `ui ]
+[; ;main3.c: 42: while(1) {
 "42
-[e $ ! && > _width -> 0 `i == -> _GP3 `i -> 0 `i 34  ]
-{
-[; ;main3.c: 43: max_width = width;
-"43
-[e = _max_width _width ]
-[; ;main3.c: 44: width = 0;
-"44
-[e = _width -> 0 `i ]
-[; ;main3.c: 45: GO = 1;
-"45
-[e = _GO -> -> 1 `i `b ]
-[; ;main3.c: 46: while(nDONE);
-"46
-[e $U 35  ]
-[e :U 36 ]
 [e :U 35 ]
-[e $ _nDONE 36  ]
-[e :U 37 ]
+{
+[; ;main3.c: 44: if((width > 0)&&(GP3 == 0)) {
+"44
+[e $ ! && > _width -> 0 `i == -> _GP3 `i -> 0 `i 37  ]
+{
+[; ;main3.c: 45: max_width = width - 110;
+"45
+[e = _max_width - _width -> 110 `i ]
+[; ;main3.c: 46: width = 0;
+"46
+[e = _width -> 0 `i ]
+[; ;main3.c: 47: GO = 1;
 "47
-}
-[e :U 34 ]
-[; ;main3.c: 47: };
-[; ;main3.c: 49: if((width == 0)&&(GP3 == 1)) {
-"49
-[e $ ! && == _width -> 0 `i == -> _GP3 `i -> 1 `i 38  ]
-{
-[; ;main3.c: 50: while(GP3) width++;
-"50
-[e $U 39  ]
-[e :U 40 ]
-[e ++ _width -> 1 `i ]
+[e = _GO -> -> 1 `i `b ]
+[; ;main3.c: 48: while(nDONE);
+"48
+[e $U 38  ]
 [e :U 39 ]
-[e $ _GP3 40  ]
-[e :U 41 ]
-"51
-}
 [e :U 38 ]
-[; ;main3.c: 51: };
-[; ;main3.c: 53: if(ADRES > max_width - 120){
-"53
-[e $ ! > -> _ADRES `i - _max_width -> 120 `i 42  ]
+[e $ _nDONE 39  ]
+[e :U 40 ]
+"49
+}
+[e :U 37 ]
+[; ;main3.c: 49: };
+[; ;main3.c: 51: if((width == 0)&&(GP3 == 1)) {
+"51
+[e $ ! && == _width -> 0 `i == -> _GP3 `i -> 1 `i 41  ]
 {
-[; ;main3.c: 54: GP2 = 1; GP1 = 0;
-"54
+[; ;main3.c: 52: while(GP3) width++;
+"52
+[e $U 42  ]
+[e :U 43 ]
+[e ++ _width -> 1 `i ]
+[e :U 42 ]
+[e $ _GP3 43  ]
+[e :U 44 ]
+"53
+}
+[e :U 41 ]
+[; ;main3.c: 53: };
+[; ;main3.c: 55: if((35 <= max_width)&&(max_width < 240)) {
+"55
+[e $ ! && <= -> 35 `i _max_width < _max_width -> 240 `i 45  ]
+{
+[; ;main3.c: 56: if(abs(ADRES - max_width) > 5) {
+"56
+[e $ ! > ( _abs (1 - -> _ADRES `i _max_width -> 5 `i 46  ]
+{
+[; ;main3.c: 57: if(ADRES > max_width){
+"57
+[e $ ! > -> _ADRES `i _max_width 47  ]
+{
+[; ;main3.c: 58: GP2 = 1; GP1 = 0;
+"58
 [e = _GP2 -> -> 1 `i `b ]
 [e = _GP1 -> -> 0 `i `b ]
-"55
-}
-[; ;main3.c: 55: } else {
-[e $U 43  ]
-[e :U 42 ]
-{
-[; ;main3.c: 56: GP2 = 0; GP1 = 1;
-"56
-[e = _GP2 -> -> 0 `i `b ]
-[e = _GP1 -> -> 1 `i `b ]
-"57
-}
-[e :U 43 ]
-[; ;main3.c: 57: };
 "59
 }
-[e :U 31 ]
-"40
-[e $U 32  ]
-[e :U 33 ]
-[; ;main3.c: 59: };
-[; ;main3.c: 60: }
+[; ;main3.c: 59: } else {
+[e $U 48  ]
+[e :U 47 ]
+{
+[; ;main3.c: 60: GP2 = 0; GP1 = 1;
 "60
-[e :UE 30 ]
+[e = _GP2 -> -> 0 `i `b ]
+[e = _GP1 -> -> 1 `i `b ]
+"61
+}
+[e :U 48 ]
+[; ;main3.c: 61: };
+"62
+}
+[; ;main3.c: 62: } else {GP2 = 0; GP1 = 0;};
+[e $U 49  ]
+[e :U 46 ]
+{
+[e = _GP2 -> -> 0 `i `b ]
+[e = _GP1 -> -> 0 `i `b ]
+}
+[e :U 49 ]
+"63
+}
+[; ;main3.c: 63: } else {GP2 = 1; GP1 = 1;};
+[e $U 50  ]
+[e :U 45 ]
+{
+[e = _GP2 -> -> 1 `i `b ]
+[e = _GP1 -> -> 1 `i `b ]
+}
+[e :U 50 ]
+"65
+}
+[e :U 34 ]
+"42
+[e $U 35  ]
+[e :U 36 ]
+[; ;main3.c: 65: };
+[; ;main3.c: 66: }
+"66
+[e :UE 33 ]
 }
