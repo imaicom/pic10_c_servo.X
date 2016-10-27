@@ -53,15 +53,19 @@ void main(void) {
         };
                    
         if((35 <= max_width)&&(max_width < 240)) {
+            
             if(abs(ADRES - max_width) > 5) {
-                if(ADRES > max_width){
+                
+                if(ADRES > max_width) {
                     GP2 = 1; GP1 = 0;
                 } else {
                     GP2 = 0; GP1 = 1;
                 };
-            } else {GP2 = 0; GP1 = 0;};
-         } else {GP2 = 1; GP1 = 1;};
+                
+            } else {GP2 = 1; GP1 = 1;}; // if(abs(ADRES - max_width) > 5)
+            
+         } else {GP2 = 0; GP1 = 0;}; // if((35 <= max_width)&&(max_width < 240))
         
-    };
+    };  //  while(1)
 }
 
