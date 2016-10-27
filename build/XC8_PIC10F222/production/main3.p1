@@ -397,60 +397,60 @@ Version 3.2 HI-TECH Software Intermediate Code
 "55
 [e $ ! && <= -> 35 `i _max_width < _max_width -> 240 `i 45  ]
 {
-[; ;main3.c: 56: if(abs(ADRES - max_width) > 5) {
-"56
+[; ;main3.c: 57: if(abs(ADRES - max_width) > 5) {
+"57
 [e $ ! > ( _abs (1 - -> _ADRES `i _max_width -> 5 `i 46  ]
 {
-[; ;main3.c: 57: if(ADRES > max_width){
-"57
+[; ;main3.c: 59: if(ADRES > max_width) {
+"59
 [e $ ! > -> _ADRES `i _max_width 47  ]
 {
-[; ;main3.c: 58: GP2 = 1; GP1 = 0;
-"58
+[; ;main3.c: 60: GP2 = 1; GP1 = 0;
+"60
 [e = _GP2 -> -> 1 `i `b ]
 [e = _GP1 -> -> 0 `i `b ]
-"59
+"61
 }
-[; ;main3.c: 59: } else {
+[; ;main3.c: 61: } else {
 [e $U 48  ]
 [e :U 47 ]
 {
-[; ;main3.c: 60: GP2 = 0; GP1 = 1;
-"60
+[; ;main3.c: 62: GP2 = 0; GP1 = 1;
+"62
 [e = _GP2 -> -> 0 `i `b ]
 [e = _GP1 -> -> 1 `i `b ]
-"61
-}
-[e :U 48 ]
-[; ;main3.c: 61: };
-"62
-}
-[; ;main3.c: 62: } else {GP2 = 0; GP1 = 0;};
-[e $U 49  ]
-[e :U 46 ]
-{
-[e = _GP2 -> -> 0 `i `b ]
-[e = _GP1 -> -> 0 `i `b ]
-}
-[e :U 49 ]
 "63
 }
-[; ;main3.c: 63: } else {GP2 = 1; GP1 = 1;};
-[e $U 50  ]
-[e :U 45 ]
+[e :U 48 ]
+[; ;main3.c: 63: };
+"65
+}
+[; ;main3.c: 65: } else {GP2 = 1; GP1 = 1;};
+[e $U 49  ]
+[e :U 46 ]
 {
 [e = _GP2 -> -> 1 `i `b ]
 [e = _GP1 -> -> 1 `i `b ]
 }
+[e :U 49 ]
+"67
+}
+[; ;main3.c: 67: } else {GP2 = 0; GP1 = 0;};
+[e $U 50  ]
+[e :U 45 ]
+{
+[e = _GP2 -> -> 0 `i `b ]
+[e = _GP1 -> -> 0 `i `b ]
+}
 [e :U 50 ]
-"65
+"69
 }
 [e :U 34 ]
 "42
 [e $U 35  ]
 [e :U 36 ]
-[; ;main3.c: 65: };
-[; ;main3.c: 66: }
-"66
+[; ;main3.c: 69: };
+[; ;main3.c: 70: }
+"70
 [e :UE 33 ]
 }

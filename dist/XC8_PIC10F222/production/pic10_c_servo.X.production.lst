@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.33 build 59893 
-                                                                                               Thu Oct 27 11:34:07 2016
+                                                                                               Thu Oct 27 19:01:31 2016
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 59893
      1                           	processor	10F222
@@ -295,7 +295,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
    289  1C2  603                	skipnc
    290  1C3  BFC                	goto	l586
    291                           
-   292                           ;main3.c: 56: if(abs(ADRES - max_width) > 5) {
+   292                           ;main3.c: 57: if(abs(ADRES - max_width) > 5) {
    293  1C4  252                	comf	main@max_width,w
    294  1C5  03C                	movwf	28
    295  1C6  253                	comf	main@max_width+1,w
@@ -328,7 +328,7 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
    322  1E0  703                	skipc
    323  1E1  BF9                	goto	l584
    324                           
-   325                           ;main3.c: 57: if(ADRES > max_width){
+   325                           ;main3.c: 59: if(ADRES > max_width) {
    326  1E2  208                	movf	8,w	;volatile
    327  1E3  03C                	movwf	28
    328  1E4  07D                	clrf	29
@@ -350,30 +350,30 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 59893
    344  1F3  603                	skipnc
    345  1F4  BF7                	goto	l582
    346                           
-   347                           ;main3.c: 58: GP2 = 1; GP1 = 0;
+   347                           ;main3.c: 60: GP2 = 1; GP1 = 0;
    348  1F5  546                	bsf	6,2	;volatile
-   349  1F6  BFA                	goto	L1
+   349  1F6  BFD                	goto	L1
    350  1F7                     l582:	
-   351                           ;main3.c: 59: } else {
+   351                           ;main3.c: 61: } else {
    352                           
    353                           
-   354                           ;main3.c: 60: GP2 = 0; GP1 = 1;
+   354                           ;main3.c: 62: GP2 = 0; GP1 = 1;
    355  1F7  446                	bcf	6,2	;volatile
-   356  1F8  BFD                	goto	L2
+   356  1F8  BFA                	goto	L2
    357  1F9                     l584:	
-   358                           ;main3.c: 61: };
-   359                           ;main3.c: 62: } else {GP2 = 0; GP1 = 0;};
+   358                           ;main3.c: 63: };
+   359                           ;main3.c: 65: } else {GP2 = 1; GP1 = 1;};
    360                           
-   361  1F9  446                	bcf	6,2	;volatile
-   362  1FA                     L1:	
-   363  1FA  426                	bcf	6,1	;volatile
+   361  1F9  546                	bsf	6,2	;volatile
+   362  1FA                     L2:	
+   363  1FA  526                	bsf	6,1	;volatile
    364                           
-   365                           ;main3.c: 63: } else {GP2 = 1; GP1 = 1;};
+   365                           ;main3.c: 67: } else {GP2 = 0; GP1 = 0;};
    366  1FB  B72                	goto	l550
    367  1FC                     l586:	
-   368  1FC  546                	bsf	6,2	;volatile
-   369  1FD                     L2:	
-   370  1FD  526                	bsf	6,1	;volatile
+   368  1FC  446                	bcf	6,2	;volatile
+   369  1FD                     L1:	
+   370  1FD  426                	bcf	6,1	;volatile
    371  1FE  B72                	goto	l550
    372  1FF                     __end_of_main:	
    373                           
@@ -611,7 +611,7 @@ ABS                  0      0       0       6        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.33 build 59893 
-Symbol Table                                                                                   Thu Oct 27 11:34:07 2016
+Symbol Table                                                                                   Thu Oct 27 19:01:31 2016
 
             __CFG_CP$OFF 0000                       _GO 0039                       fsr 0004  
                     l516 013F                      l524 013A                      l550 0172  
