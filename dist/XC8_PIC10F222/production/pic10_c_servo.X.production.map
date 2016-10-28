@@ -1,20 +1,20 @@
-Microchip MPLAB XC8 Compiler V1.33 ()
+Microchip MPLAB XC8 Compiler V1.38 ()
 
 Linker command line:
 
---edf=/Applications/microchip/xc8/v1.33/dat/en_msgs.txt -cs \
+--edf=/Applications/microchip/xc8/v1.38/dat/en_msgs.txt -cs \
   -h+dist/XC8_PIC10F222/production/pic10_c_servo.X.production.sym \
   --cmf=dist/XC8_PIC10F222/production/pic10_c_servo.X.production.cmf -z \
-  -Q10F222 -o/tmp/cgtDqnfQA \
+  -Q10F222 -o/tmp/xcyknHuKZ \
   -Mdist/XC8_PIC10F222/production/pic10_c_servo.X.production.map -E1 \
   -ver=XC8 -ASTACK=014h-01bh -pstack=STACK -ACODE=00h-01FEh \
-  -AENTRY=00h-0FFh-01FEh -ASTRING=00h-0FFh -ASTRCODE=00h-01FEh \
+  -ASTRCODE=00h-01FEh -ASTRING=00h-0FFh -AENTRY=00h-0FFh-01FEh \
   -ABANK0=09h-01Dh -ARAM=09h-01Dh -AABS1=09h-01Fh -ACOMMON=01Ch-01Fh \
   -ASFR0=00h-08h \
   -preset_vec=01ffh,reset_wrap=0h,init,end_init,cinit,clrtext \
   -ppowerup=CODE -pfunctab=ENTRY -ACONFIG=0FFFh-0FFFh -pconfig=CONFIG \
   -DCONFIG=2 -AIDLOC=0200h-0203h -pidloc=IDLOC -DIDLOC=2 -pstrings=-STRING \
-  -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/cgtstnWdC.obj \
+  -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcHzaK5FX.obj \
   dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj 
 
 Object code version is 3.11
@@ -24,7 +24,7 @@ Machine type is 10F222
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/cgtstnWdC.obj
+/tmp/xcHzaK5FX.obj
                 end_init                              2        2        1        0       0
                 reset_wrap                            0        0        2        0       0
                 reset_vec                           1FF      1FF        1      3FE       0
@@ -46,15 +46,15 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text1                               12C      12C       11         0
                 maintext                            15E      15E       A1         0
 
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+
         CLASS   ENTRY          
                 end_init                              2        2        1         0
                 cinit                                 3        3        2         0
                 reset_wrap                            0        0        2         0
                 jmp_tab                               5        5        2         0
-
-        CLASS   STRING         
-
-        CLASS   STRCODE        
 
         CLASS   BANK0          
                 cstackBANK0                           9        9        B         1
@@ -191,7 +191,6 @@ __pcstackBANK0           cstackBANK0  0009
 __pcstackCOMMON          cstackCOMMON 0000
 __pjmp_tab               jmp_tab      0005
 __pmaintext              maintext     015E
-__ptext0                 text0        0000
 __ptext1                 text1        012C
 __ptext2                 text2        013D
 __size_of_Delay_ms       (abs)        0000
@@ -244,7 +243,7 @@ FUNCTION INFORMATION:
   max_width       2    9[BANK0 ] int 
   width           2    7[BANK0 ] int 
  Return value:  Size  Location     Type
-		None               void
+                  1   41[None  ] void 
  Registers used:
 		wreg, fsr0l, fsr0h, status,2, status,0, btemp+0, btemp+1, btemp+2, btemp+3, pclath, cstack
  Tracked objects:
@@ -303,7 +302,7 @@ Total ram usage:        2 bytes
  Auto vars:     Size  Location     Type
   i               2    4[BANK0 ] unsigned int 
  Return value:  Size  Location     Type
-		None               void
+                  1    0[BANK0 ] void 
  Registers used:
 		wreg, fsr0l, fsr0h, status,2, btemp+0, btemp+1
  Tracked objects:
@@ -329,14 +328,14 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 main3.c
-		_abs           		CODE           	012C	0000	17
-		_main          		CODE           	015E	0000	161
-		_Delay_ms      		CODE           	013D	0000	33
+		_abs           		CODE           	012C	0000	18
+		_main          		CODE           	015E	0000	162
+		_Delay_ms      		CODE           	013D	0000	34
 
-main3.c estimated size: 211
+main3.c estimated size: 214
 
 shared
-		__initializatio		ENTRY          	0003	0000	0
+		__initialization		ENTRY          	0003	0000	1
 
-shared estimated size: 0
+shared estimated size: 1
 

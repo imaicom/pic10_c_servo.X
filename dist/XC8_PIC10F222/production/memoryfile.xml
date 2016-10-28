@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/XC8_PIC10F222/production/pic10_c_servo.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>512</length>
+      <used>219</used>
+      <free>293</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>23</length>
+      <used>15</used>
+      <free>8</free>
+    </memory>
+  </executable>
+</project>

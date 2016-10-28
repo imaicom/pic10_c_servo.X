@@ -1,10 +1,10 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[v F196 `(v ~T0 @X0 1 tf1`ul ]
-"154 /Applications/microchip/xc8/v1.33/include/pic.h
-[v __delay `JF196 ~T0 @X0 0 e ]
+[v F198 `(v ~T0 @X0 1 tf1`ul ]
+"152 /Applications/microchip/xc8/v1.38/include/pic.h
+[v __delay `JF198 ~T0 @X0 0 e ]
 [p i __delay ]
 [p mainexit ]
-"449 /Applications/microchip/xc8/v1.33/include/pic10f222.h
+"449 /Applications/microchip/xc8/v1.38/include/pic10f222.h
 [v _OPTION `VWuc ~T0 @X0 0 e@0 ]
 "455
 [v _TRISGPIO `VWuc ~T0 @X0 0 e@6 ]
@@ -30,10 +30,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _nDONE `Vb ~T0 @X0 0 e@57 ]
 "380
 [v _ADRES `Vuc ~T0 @X0 0 e@8 ]
-[; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
-[; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
+[; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
+[; ;htc.h: 28: extern double __fpnormalize(double);
+[; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic10f222.h: 49: extern volatile unsigned char INDF @ 0x000;
-"51 /Applications/microchip/xc8/v1.33/include/pic10f222.h
+"51 /Applications/microchip/xc8/v1.38/include/pic10f222.h
 [; ;pic10f222.h: 51: asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
 [; ;pic10f222.h: 54: typedef union {
@@ -214,7 +215,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic10f222.h: 541: extern volatile __bit nPD @ (((unsigned) &STATUS)*8) + 3;
 [; ;pic10f222.h: 543: extern volatile __bit nTO @ (((unsigned) &STATUS)*8) + 4;
 [; ;pic.h: 28: extern void __nop(void);
-[; ;pic.h: 154: extern __nonreentrant void _delay(unsigned long);
+[; ;pic.h: 152: extern __nonreentrant void _delay(unsigned long);
+[; ;pic.h: 186: extern unsigned char __resetbits;
+[; ;pic.h: 187: extern __bit __powerdown;
+[; ;pic.h: 188: extern __bit __timeout;
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
