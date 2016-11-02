@@ -401,9 +401,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "55
 [e $ ! && <= -> 35 `i _max_width < _max_width -> 240 `i 45  ]
 {
-[; ;main3.c: 57: if(abs(ADRES - max_width) > 5) {
+[; ;main3.c: 57: if(abs(ADRES - max_width) > 10) {
 "57
-[e $ ! > ( _abs (1 - -> _ADRES `i _max_width -> 5 `i 46  ]
+[e $ ! > ( _abs (1 - -> _ADRES `i _max_width -> 10 `i 46  ]
 {
 [; ;main3.c: 59: if(ADRES > max_width) {
 "59

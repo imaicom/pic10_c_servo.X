@@ -54,7 +54,7 @@ void main(void) {
                    
         if((35 <= max_width)&&(max_width < 240)) {
             
-            if(abs(ADRES - max_width) > 5) {
+            if(abs(ADRES - max_width) > 10) { // 5
                 
                 if(ADRES > max_width) {
                     GP2 = 1; GP1 = 0;

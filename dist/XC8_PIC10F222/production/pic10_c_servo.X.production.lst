@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.38 build -256452561 
-                                                                                               Fri Oct 28 21:00:29 2016
+                                                                                               Thu Nov  3 00:38:37 2016
 
 Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010351
      1                           	processor	10F222
@@ -289,7 +289,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    283  1C2  603                	skipnc
    284  1C3  BFC                	goto	l589
    285                           
-   286                           ;main3.c: 57: if(abs(ADRES - max_width) > 5) {
+   286                           ;main3.c: 57: if(abs(ADRES - max_width) > 10) {
    287  1C4  252                	comf	main@max_width,w
    288  1C5  03C                	movwf	28
    289  1C6  253                	comf	main@max_width+1,w
@@ -316,7 +316,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
    310  1DB  09C                	subwf	28,w
    311  1DC  743                	skipz
    312  1DD  BE0                	goto	u255
-   313  1DE  C06                	movlw	6
+   313  1DE  C0B                	movlw	11
    314  1DF  09E                	subwf	30,w
    315  1E0                     u255:	
    316  1E0  703                	skipc
@@ -605,7 +605,7 @@ ABS                  0      0       0       6        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.38 build -256452561 
-Symbol Table                                                                                   Fri Oct 28 21:00:29 2016
+Symbol Table                                                                                   Thu Nov  3 00:38:37 2016
 
             __CFG_CP$OFF 0000                       _GO 0039                       fsr 0004  
                     l519 013F                      l527 013A                      l553 0172  
