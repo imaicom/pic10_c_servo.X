@@ -27,6 +27,7 @@ void main(void) {
     
     int width = 0;
     int max_width = 0;
+//    long int b;
     
     OPTION = 0b11000000;
    

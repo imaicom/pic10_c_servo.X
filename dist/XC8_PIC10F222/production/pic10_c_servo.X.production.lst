@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.38 build -256452561 
-                                                                                               Sun Nov 27 20:17:46 2016
+                                                                                               Sun Nov 27 20:56:19 2016
 
 Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010351
      1                           	processor	10F222
@@ -48,7 +48,7 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
     42                           
     43  003                     __end_of__initialization:	
     44  003  064                	clrf	4
-    45  004  B63                	ljmp	_main	;jump to C main() function
+    45  004  B5C                	ljmp	_main	;jump to C main() function
     46                           
     47                           	psect	cstackCOMMON
     48  000                     __pcstackCOMMON:	
@@ -86,464 +86,461 @@ Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010
     80                           
     81                           ; 1 bytes @ 0x6
     82  00F                     	ds	1
-    83  010                     main@width1:	
+    83  010                     main@width:	
     84                           
-    85                           ; 1 bytes @ 0x7
-    86  010                     	ds	1
-    87  011                     main@max_width:	
+    85                           ; 2 bytes @ 0x7
+    86  010                     	ds	2
+    87  012                     main@max_width:	
     88                           
-    89                           ; 2 bytes @ 0x8
-    90  011                     	ds	2
-    91  013                     main@width0:	
-    92                           
-    93                           ; 1 bytes @ 0xA
-    94  013                     	ds	1
-    95                           
-    96                           	psect	maintext
-    97  163                     __pmaintext:	
-    98 ;;
-    99 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
-   100 ;;
-   101 ;; *************** function _main *****************
-   102 ;; Defined at:
-   103 ;;		line 26 in file "main4.c"
-   104 ;; Parameters:    Size  Location     Type
-   105 ;;		None
-   106 ;; Auto vars:     Size  Location     Type
-   107 ;;  max_width       2    8[BANK0 ] int 
-   108 ;;  width0          1   10[BANK0 ] unsigned char 
-   109 ;;  width1          1    7[BANK0 ] unsigned char 
-   110 ;; Return value:  Size  Location     Type
-   111 ;;                  1   41[None  ] void 
-   112 ;; Registers used:
-   113 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+0, btemp+1, btemp+2, btemp+3, pclath, cstack
-   114 ;; Tracked objects:
-   115 ;;		On entry : B00/0
-   116 ;;		On exit  : 0/0
-   117 ;;		Unchanged: 0/0
-   118 ;; Data sizes:     COMMON   BANK0
-   119 ;;      Params:         0       0
-   120 ;;      Locals:         0       4
-   121 ;;      Temps:          0       1
-   122 ;;      Totals:         0       5
-   123 ;;Total ram usage:        5 bytes
-   124 ;; Hardware stack levels required when called:    1
-   125 ;; This function calls:
-   126 ;;		_Delay_ms
-   127 ;;		_abs
-   128 ;; This function is called by:
-   129 ;;		Startup code after reset
-   130 ;; This function uses a non-reentrant model
-   131 ;;
-   132                           
+    89                           ; 2 bytes @ 0x9
+    90  012                     	ds	2
+    91                           
+    92                           	psect	maintext
+    93  15C                     __pmaintext:	
+    94 ;;
+    95 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+    96 ;;
+    97 ;; *************** function _main *****************
+    98 ;; Defined at:
+    99 ;;		line 26 in file "main3.c"
+   100 ;; Parameters:    Size  Location     Type
+   101 ;;		None
+   102 ;; Auto vars:     Size  Location     Type
+   103 ;;  max_width       2    9[BANK0 ] int 
+   104 ;;  width           2    7[BANK0 ] int 
+   105 ;; Return value:  Size  Location     Type
+   106 ;;                  1   41[None  ] void 
+   107 ;; Registers used:
+   108 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+0, btemp+1, btemp+2, btemp+3, pclath, cstack
+   109 ;; Tracked objects:
+   110 ;;		On entry : B00/0
+   111 ;;		On exit  : 0/0
+   112 ;;		Unchanged: 0/0
+   113 ;; Data sizes:     COMMON   BANK0
+   114 ;;      Params:         0       0
+   115 ;;      Locals:         0       4
+   116 ;;      Temps:          0       1
+   117 ;;      Totals:         0       5
+   118 ;;Total ram usage:        5 bytes
+   119 ;; Hardware stack levels required when called:    1
+   120 ;; This function calls:
+   121 ;;		_Delay_ms
+   122 ;;		_abs
+   123 ;; This function is called by:
+   124 ;;		Startup code after reset
+   125 ;; This function uses a non-reentrant model
+   126 ;;
+   127                           
+   128                           
+   129                           ;psect for function _main
+   130  15C                     _main:	
+   131                           
+   132                           ;main3.c: 28: int width = 0;
    133                           
-   134                           ;psect for function _main
-   135  163                     _main:	
-   136                           
-   137                           ;main4.c: 28: char width0 = 0;
+   134                           ;incstack = 0
+   135                           ; Regs used in _main: [wreg-fsr0h+status,2-btemp+3+pclath+cstack]
+   136  15C  070                	clrf	main@width
+   137  15D  071                	clrf	main@width+1
    138                           
-   139                           ;incstack = 0
-   140                           ; Regs used in _main: [wreg-fsr0h+status,2-btemp+3+pclath+cstack]
-   141  163  073                	clrf	main@width0
+   139                           ;main3.c: 29: int max_width = 0;
+   140  15E  072                	clrf	main@max_width
+   141  15F  073                	clrf	main@max_width+1
    142                           
-   143                           ;main4.c: 29: char width1 = 0;
-   144  164  070                	clrf	main@width1
-   145                           
-   146                           ;main4.c: 30: int max_width = 0;
-   147  165  071                	clrf	main@max_width
-   148  166  072                	clrf	main@max_width+1
-   149                           
-   150                           ;main4.c: 32: OPTION = 0b11000000;
-   151  167  CC0                	movlw	192
-   152  168  002                	option
+   143                           ;main3.c: 32: OPTION = 0b11000000;
+   144  160  CC0                	movlw	192
+   145  161  002                	option
+   146                           
+   147                           ;main3.c: 34: TRISGPIO = 0b1000;
+   148  162  C08                	movlw	8
+   149  163  006                	tris	6
+   150                           
+   151                           ;main3.c: 35: ANS0 = 1;
+   152  164  5C7                	bsf	7,6	;volatile
    153                           
-   154                           ;main4.c: 34: TRISGPIO = 0b1000;
-   155  169  C08                	movlw	8
-   156  16A  006                	tris	6
-   157                           
-   158                           ;main4.c: 35: ANS0 = 1;
-   159  16B  5C7                	bsf	7,6	;volatile
+   154                           ;main3.c: 36: ANS1 = 0;
+   155  165  4E7                	bcf	7,7	;volatile
+   156                           
+   157                           ;main3.c: 37: CHS1 = 0; CHS0 = 0;
+   158  166  467                	bcf	7,3	;volatile
+   159  167  447                	bcf	7,2	;volatile
    160                           
-   161                           ;main4.c: 36: ANS1 = 0;
-   162  16C  4E7                	bcf	7,7	;volatile
+   161                           ;main3.c: 38: ADON = 1;
+   162  168  507                	bsf	7,0	;volatile
    163                           
-   164                           ;main4.c: 37: CHS1 = 0; CHS0 = 0;
-   165  16D  467                	bcf	7,3	;volatile
-   166  16E  447                	bcf	7,2	;volatile
+   164                           ;main3.c: 40: GP2 = 0; GP1 = 0;
+   165  169  446                	bcf	6,2	;volatile
+   166  16A  426                	bcf	6,1	;volatile
    167                           
-   168                           ;main4.c: 38: ADON = 1;
-   169  16F  507                	bsf	7,0	;volatile
-   170                           
-   171                           ;main4.c: 40: GP2 = 0; GP1 = 0;
-   172  170  446                	bcf	6,2	;volatile
-   173  171  426                	bcf	6,1	;volatile
-   174                           
-   175                           ;main4.c: 41: Delay_ms(1000);
-   176  172  CE8                	movlw	232
-   177  173  029                	movwf	Delay_ms@DELAY_CNT
-   178  174  C03                	movlw	3
-   179  175  02A                	movwf	Delay_ms@DELAY_CNT+1
-   180  176  906                	fcall	entry__Delay_ms
-   181  177                     l564:	
-   182                           ;main4.c: 43: while(1) {
-   183                           
-   184                           
-   185                           ;main4.c: 45: if((width1 > 0)&&(width0 > 0)&&(GP3 == 0)) {
-   186  177  210                	movf	main@width1,w
-   187  178  643                	btfsc	3,2
-   188  179  B90                	goto	l580
-   189  17A  213                	movf	main@width0,w
-   190  17B  743                	btfss	3,2
-   191  17C  666                	btfsc	6,3	;volatile
-   192  17D  B90                	goto	l580
-   193                           
-   194                           ;main4.c: 46: max_width = (int)width1*256 + (int)width0 - 110;
-   195  17E  210                	movf	main@width1,w
-   196  17F  03D                	movwf	29
-   197  180  213                	movf	main@width0,w
-   198  181  03C                	movwf	28
-   199  182  C92                	movlw	146
-   200  183  1DC                	addwf	28,w
-   201  184  031                	movwf	main@max_width
-   202  185  21D                	movf	29,w
-   203  186  032                	movwf	main@max_width+1
-   204  187  603                	skipnc
-   205  188  2B2                	incf	main@max_width+1,f
-   206  189  CFF                	movlw	255
-   207  18A  1F2                	addwf	main@max_width+1,f
-   208                           
-   209                           ;main4.c: 47: width1 = 0;
-   210  18B  070                	clrf	main@width1
-   211                           
-   212                           ;main4.c: 48: width0 = 0;
-   213  18C  073                	clrf	main@width0
-   214                           
-   215                           ;main4.c: 49: GO = 1;
-   216  18D  527                	bsf	7,1	;volatile
-   217  18E                     l578:	
-   218                           ;main4.c: 50: while(nDONE);
+   168                           ;main3.c: 41: Delay_ms(1000);
+   169  16B  CE8                	movlw	232
+   170  16C  029                	movwf	Delay_ms@DELAY_CNT
+   171  16D  C03                	movlw	3
+   172  16E  02A                	movwf	Delay_ms@DELAY_CNT+1
+   173  16F  906                	fcall	entry__Delay_ms
+   174  170                     l555:	
+   175                           ;main3.c: 43: while(1) {
+   176                           
+   177                           
+   178                           ;main3.c: 45: if((width > 0)&&(GP3 == 0)) {
+   179  170  211                	movf	main@width+1,w
+   180  171  03F                	movwf	31
+   181  172  210                	movf	main@width,w
+   182  173  03E                	movwf	30
+   183  174  21F                	movf	31,w
+   184  175  F80                	xorlw	128
+   185  176  03C                	movwf	28
+   186  177  C80                	movlw	128
+   187  178  09C                	subwf	28,w
+   188  179  743                	skipz
+   189  17A  B7D                	goto	u175
+   190  17B  C01                	movlw	1
+   191  17C  09E                	subwf	30,w
+   192  17D                     u175:	
+   193  17D  603                	btfsc	3,0
+   194  17E  666                	btfsc	6,3	;volatile
+   195  17F  B94                	goto	l569
+   196                           
+   197                           ;main3.c: 46: GP2 = 1; GP1 = 1;
+   198  180  546                	bsf	6,2	;volatile
+   199  181  526                	bsf	6,1	;volatile
+   200                           
+   201                           ;main3.c: 47: max_width = width - 110;
+   202  182  211                	movf	main@width+1,w
+   203  183  03D                	movwf	29
+   204  184  210                	movf	main@width,w
+   205  185  03C                	movwf	28
+   206  186  C92                	movlw	146
+   207  187  1DC                	addwf	28,w
+   208  188  032                	movwf	main@max_width
+   209  189  21D                	movf	29,w
+   210  18A  033                	movwf	main@max_width+1
+   211  18B  603                	skipnc
+   212  18C  2B3                	incf	main@max_width+1,f
+   213  18D  CFF                	movlw	255
+   214  18E  1F3                	addwf	main@max_width+1,f
+   215                           
+   216                           ;main3.c: 48: width = 0;
+   217  18F  070                	clrf	main@width
+   218  190  071                	clrf	main@width+1
    219                           
-   220  18E  627                	btfsc	7,1	;volatile
-   221  18F  B8E                	goto	l578
-   222  190                     l580:	
-   223                           
-   224                           ;main4.c: 51: };
-   225                           ;main4.c: 53: if((width1 == 0)&&(width0 == 0)&&(GP3 == 1)) {
-   226  190  210                	movf	main@width1,w
-   227  191  743                	btfss	3,2
-   228  192  BA6                	goto	l596
-   229  193  213                	movf	main@width0,w
-   230  194  743                	btfss	3,2
-   231  195  BA6                	goto	l596
-   232  196  666                	btfsc	6,3	;volatile
-   233  197  BA4                	goto	l594
-   234  198  BA6                	goto	l596
-   235  199                     l588:	
-   236                           ;main4.c: 54: while(GP3) {
-   237                           
-   238                           
-   239                           ;main4.c: 55: width0++; if(width0==0) width1++;
-   240  199  C01                	movlw	1
-   241  19A  03F                	movwf	31
-   242  19B  21F                	movf	31,w
-   243  19C  1F3                	addwf	main@width0,f
-   244  19D  213                	movf	main@width0,w
-   245  19E  743                	btfss	3,2
-   246  19F  BA4                	goto	l594
-   247  1A0  C01                	movlw	1
-   248  1A1  03F                	movwf	31
-   249  1A2  21F                	movf	31,w
-   250  1A3  1F0                	addwf	main@width1,f
-   251  1A4                     l594:	
-   252  1A4  666                	btfsc	6,3	;volatile
-   253  1A5  B99                	goto	l588
-   254  1A6                     l596:	
-   255                           ;main4.c: 56: };
-   256                           
-   257                           
-   258                           ;main4.c: 57: };
-   259                           ;main4.c: 59: if((35 <= max_width)&&(max_width < 240)) {
-   260  1A6  212                	movf	main@max_width+1,w
-   261  1A7  03F                	movwf	31
-   262  1A8  211                	movf	main@max_width,w
-   263  1A9  03E                	movwf	30
-   264  1AA  21F                	movf	31,w
-   265  1AB  F80                	xorlw	128
-   266  1AC  03C                	movwf	28
-   267  1AD  C80                	movlw	128
-   268  1AE  09C                	subwf	28,w
-   269  1AF  743                	skipz
-   270  1B0  BB3                	goto	u295
-   271  1B1  C23                	movlw	35
-   272  1B2  09E                	subwf	30,w
-   273  1B3                     u295:	
-   274  1B3  703                	skipc
-   275  1B4  BFC                	goto	l610
-   276  1B5  212                	movf	main@max_width+1,w
-   277  1B6  03F                	movwf	31
-   278  1B7  211                	movf	main@max_width,w
-   279  1B8  03E                	movwf	30
-   280  1B9  21F                	movf	31,w
-   281  1BA  F80                	xorlw	128
-   282  1BB  03C                	movwf	28
-   283  1BC  C80                	movlw	128
-   284  1BD  09C                	subwf	28,w
-   285  1BE  743                	skipz
-   286  1BF  BC2                	goto	u305
-   287  1C0  CF0                	movlw	240
-   288  1C1  09E                	subwf	30,w
-   289  1C2                     u305:	
-   290  1C2  603                	skipnc
-   291  1C3  BFC                	goto	l610
-   292                           
-   293                           ;main4.c: 61: if(abs(ADRES - max_width) > 15) {
-   294  1C4  251                	comf	main@max_width,w
-   295  1C5  03C                	movwf	28
-   296  1C6  252                	comf	main@max_width+1,w
-   297  1C7  03D                	movwf	29
-   298  1C8  2BC                	incf	28,f
-   299  1C9  643                	skipnz
-   300  1CA  2BD                	incf	29,f
-   301  1CB  208                	movf	8,w	;volatile
-   302  1CC  1DC                	addwf	28,w
-   303  1CD  029                	movwf	abs@t
-   304  1CE  21D                	movf	29,w
-   305  1CF  603                	skipnc
-   306  1D0  29D                	incf	29,w
-   307  1D1  02A                	movwf	abs@t+1
-   308  1D2  905                	fcall	entry__abs
-   309  1D3  209                	movf	?_abs,w
-   310  1D4  03E                	movwf	30
-   311  1D5  20A                	movf	?_abs+1,w
-   312  1D6  03F                	movwf	31
-   313  1D7  21F                	movf	31,w
-   314  1D8  F80                	xorlw	128
-   315  1D9  03C                	movwf	28
-   316  1DA  C80                	movlw	128
-   317  1DB  09C                	subwf	28,w
-   318  1DC  743                	skipz
-   319  1DD  BE0                	goto	u315
-   320  1DE  C10                	movlw	16
-   321  1DF  09E                	subwf	30,w
-   322  1E0                     u315:	
-   323  1E0  703                	skipc
-   324  1E1  BF9                	goto	l608
-   325                           
-   326                           ;main4.c: 63: if(ADRES > max_width) {
-   327  1E2  208                	movf	8,w	;volatile
-   328  1E3  03C                	movwf	28
-   329  1E4  07D                	clrf	29
-   330  1E5  212                	movf	main@max_width+1,w
-   331  1E6  03F                	movwf	31
-   332  1E7  211                	movf	main@max_width,w
-   333  1E8  03E                	movwf	30
-   334  1E9  21F                	movf	31,w
-   335  1EA  F80                	xorlw	128
-   336  1EB  02F                	movwf	??_main
-   337  1EC  21D                	movf	29,w
-   338  1ED  F80                	xorlw	128
-   339  1EE  08F                	subwf	??_main,w
-   340  1EF  743                	skipz
-   341  1F0  BF3                	goto	u325
-   342  1F1  21C                	movf	28,w
-   343  1F2  09E                	subwf	30,w
-   344  1F3                     u325:	
-   345  1F3  603                	skipnc
-   346  1F4  BF7                	goto	l606
-   347                           
-   348                           ;main4.c: 64: GP2 = 1; GP1 = 0;
-   349  1F5  546                	bsf	6,2	;volatile
-   350  1F6  BFD                	goto	L1
-   351  1F7                     l606:	
-   352                           ;main4.c: 65: } else {
-   353                           
-   354                           
-   355                           ;main4.c: 66: GP2 = 0; GP1 = 1;
-   356  1F7  446                	bcf	6,2	;volatile
-   357  1F8  BFA                	goto	L2
-   358  1F9                     l608:	
-   359                           ;main4.c: 67: };
-   360                           ;main4.c: 69: } else {GP2 = 1; GP1 = 1;};
-   361                           
-   362  1F9  546                	bsf	6,2	;volatile
-   363  1FA                     L2:	
-   364  1FA  526                	bsf	6,1	;volatile
-   365                           
-   366                           ;main4.c: 71: } else {GP2 = 0; GP1 = 0;};
-   367  1FB  B77                	goto	l564
-   368  1FC                     l610:	
-   369  1FC  446                	bcf	6,2	;volatile
-   370  1FD                     L1:	
-   371  1FD  426                	bcf	6,1	;volatile
-   372  1FE  B77                	goto	l564
-   373  1FF                     __end_of_main:	
-   374                           
-   375                           	psect	text1
-   376  131                     __ptext1:	
-   377 ;; *************** function _abs *****************
-   378 ;; Defined at:
-   379 ;;		line 21 in file "main4.c"
-   380 ;; Parameters:    Size  Location     Type
-   381 ;;  t               2    0[BANK0 ] int 
-   382 ;; Auto vars:     Size  Location     Type
-   383 ;;		None
-   384 ;; Return value:  Size  Location     Type
-   385 ;;                  2    0[BANK0 ] int 
-   386 ;; Registers used:
-   387 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+0, btemp+1
-   388 ;; Tracked objects:
-   389 ;;		On entry : 0/0
-   390 ;;		On exit  : 0/0
-   391 ;;		Unchanged: 0/0
-   392 ;; Data sizes:     COMMON   BANK0
-   393 ;;      Params:         0       2
-   394 ;;      Locals:         0       0
-   395 ;;      Temps:          0       0
-   396 ;;      Totals:         0       2
-   397 ;;Total ram usage:        2 bytes
-   398 ;; Hardware stack levels used:    1
-   399 ;; This function calls:
-   400 ;;		Nothing
-   401 ;; This function is called by:
-   402 ;;		_main
-   403 ;; This function uses a non-reentrant model
-   404 ;;
-   405                           
+   220                           ;main3.c: 49: GO = 1;
+   221  191  527                	bsf	7,1	;volatile
+   222  192                     l567:	
+   223                           ;main3.c: 50: while(nDONE);
+   224                           
+   225  192  627                	btfsc	7,1	;volatile
+   226  193  B92                	goto	l567
+   227  194                     l569:	
+   228                           
+   229                           ;main3.c: 51: };
+   230                           ;main3.c: 53: if((width == 0)&&(GP3 == 1)) {
+   231  194  210                	movf	main@width,w
+   232  195  111                	iorwf	main@width+1,w
+   233  196  743                	btfss	3,2
+   234  197  BA6                	goto	l579
+   235  198  666                	btfsc	6,3	;volatile
+   236  199  BA4                	goto	l577
+   237  19A  BA6                	goto	l579
+   238  19B                     l575:	
+   239                           ;main3.c: 54: while(GP3) width++;
+   240                           
+   241  19B  C01                	movlw	1
+   242  19C  03C                	movwf	28
+   243  19D  07D                	clrf	29
+   244  19E  21C                	movf	28,w
+   245  19F  1F0                	addwf	main@width,f
+   246  1A0  603                	skipnc
+   247  1A1  2B1                	incf	main@width+1,f
+   248  1A2  21D                	movf	29,w
+   249  1A3  1F1                	addwf	main@width+1,f
+   250  1A4                     l577:	
+   251  1A4  666                	btfsc	6,3	;volatile
+   252  1A5  B9B                	goto	l575
+   253  1A6                     l579:	
+   254                           
+   255                           ;main3.c: 55: };
+   256                           ;main3.c: 57: if((35 <= max_width)&&(max_width < 240)) {
+   257  1A6  213                	movf	main@max_width+1,w
+   258  1A7  03F                	movwf	31
+   259  1A8  212                	movf	main@max_width,w
+   260  1A9  03E                	movwf	30
+   261  1AA  21F                	movf	31,w
+   262  1AB  F80                	xorlw	128
+   263  1AC  03C                	movwf	28
+   264  1AD  C80                	movlw	128
+   265  1AE  09C                	subwf	28,w
+   266  1AF  743                	skipz
+   267  1B0  BB3                	goto	u235
+   268  1B1  C23                	movlw	35
+   269  1B2  09E                	subwf	30,w
+   270  1B3                     u235:	
+   271  1B3  703                	skipc
+   272  1B4  BFC                	goto	l593
+   273  1B5  213                	movf	main@max_width+1,w
+   274  1B6  03F                	movwf	31
+   275  1B7  212                	movf	main@max_width,w
+   276  1B8  03E                	movwf	30
+   277  1B9  21F                	movf	31,w
+   278  1BA  F80                	xorlw	128
+   279  1BB  03C                	movwf	28
+   280  1BC  C80                	movlw	128
+   281  1BD  09C                	subwf	28,w
+   282  1BE  743                	skipz
+   283  1BF  BC2                	goto	u245
+   284  1C0  CF0                	movlw	240
+   285  1C1  09E                	subwf	30,w
+   286  1C2                     u245:	
+   287  1C2  603                	skipnc
+   288  1C3  BFC                	goto	l593
+   289                           
+   290                           ;main3.c: 59: if(abs(ADRES - max_width) > 15) {
+   291  1C4  252                	comf	main@max_width,w
+   292  1C5  03C                	movwf	28
+   293  1C6  253                	comf	main@max_width+1,w
+   294  1C7  03D                	movwf	29
+   295  1C8  2BC                	incf	28,f
+   296  1C9  643                	skipnz
+   297  1CA  2BD                	incf	29,f
+   298  1CB  208                	movf	8,w	;volatile
+   299  1CC  1DC                	addwf	28,w
+   300  1CD  029                	movwf	abs@t
+   301  1CE  21D                	movf	29,w
+   302  1CF  603                	skipnc
+   303  1D0  29D                	incf	29,w
+   304  1D1  02A                	movwf	abs@t+1
+   305  1D2  905                	fcall	entry__abs
+   306  1D3  209                	movf	?_abs,w
+   307  1D4  03E                	movwf	30
+   308  1D5  20A                	movf	?_abs+1,w
+   309  1D6  03F                	movwf	31
+   310  1D7  21F                	movf	31,w
+   311  1D8  F80                	xorlw	128
+   312  1D9  03C                	movwf	28
+   313  1DA  C80                	movlw	128
+   314  1DB  09C                	subwf	28,w
+   315  1DC  743                	skipz
+   316  1DD  BE0                	goto	u255
+   317  1DE  C10                	movlw	16
+   318  1DF  09E                	subwf	30,w
+   319  1E0                     u255:	
+   320  1E0  703                	skipc
+   321  1E1  BF9                	goto	l591
+   322                           
+   323                           ;main3.c: 61: if(ADRES > max_width) {
+   324  1E2  208                	movf	8,w	;volatile
+   325  1E3  03C                	movwf	28
+   326  1E4  07D                	clrf	29
+   327  1E5  213                	movf	main@max_width+1,w
+   328  1E6  03F                	movwf	31
+   329  1E7  212                	movf	main@max_width,w
+   330  1E8  03E                	movwf	30
+   331  1E9  21F                	movf	31,w
+   332  1EA  F80                	xorlw	128
+   333  1EB  02F                	movwf	??_main
+   334  1EC  21D                	movf	29,w
+   335  1ED  F80                	xorlw	128
+   336  1EE  08F                	subwf	??_main,w
+   337  1EF  743                	skipz
+   338  1F0  BF3                	goto	u265
+   339  1F1  21C                	movf	28,w
+   340  1F2  09E                	subwf	30,w
+   341  1F3                     u265:	
+   342  1F3  603                	skipnc
+   343  1F4  BF7                	goto	l589
+   344                           
+   345                           ;main3.c: 62: GP2 = 1; GP1 = 0;
+   346  1F5  546                	bsf	6,2	;volatile
+   347  1F6  BFD                	goto	L1
+   348  1F7                     l589:	
+   349                           ;main3.c: 63: } else {
+   350                           
+   351                           
+   352                           ;main3.c: 64: GP2 = 0; GP1 = 1;
+   353  1F7  446                	bcf	6,2	;volatile
+   354  1F8  BFA                	goto	L2
+   355  1F9                     l591:	
+   356                           ;main3.c: 65: };
+   357                           ;main3.c: 67: } else {GP2 = 1; GP1 = 1;};
+   358                           
+   359  1F9  546                	bsf	6,2	;volatile
+   360  1FA                     L2:	
+   361  1FA  526                	bsf	6,1	;volatile
+   362                           
+   363                           ;main3.c: 69: } else {GP2 = 0; GP1 = 0;};
+   364  1FB  B70                	goto	l555
+   365  1FC                     l593:	
+   366  1FC  446                	bcf	6,2	;volatile
+   367  1FD                     L1:	
+   368  1FD  426                	bcf	6,1	;volatile
+   369  1FE  B70                	goto	l555
+   370  1FF                     __end_of_main:	
+   371                           
+   372                           	psect	text1
+   373  12A                     __ptext1:	
+   374 ;; *************** function _abs *****************
+   375 ;; Defined at:
+   376 ;;		line 21 in file "main3.c"
+   377 ;; Parameters:    Size  Location     Type
+   378 ;;  t               2    0[BANK0 ] int 
+   379 ;; Auto vars:     Size  Location     Type
+   380 ;;		None
+   381 ;; Return value:  Size  Location     Type
+   382 ;;                  2    0[BANK0 ] int 
+   383 ;; Registers used:
+   384 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+0, btemp+1
+   385 ;; Tracked objects:
+   386 ;;		On entry : 0/0
+   387 ;;		On exit  : 0/0
+   388 ;;		Unchanged: 0/0
+   389 ;; Data sizes:     COMMON   BANK0
+   390 ;;      Params:         0       2
+   391 ;;      Locals:         0       0
+   392 ;;      Temps:          0       0
+   393 ;;      Totals:         0       2
+   394 ;;Total ram usage:        2 bytes
+   395 ;; Hardware stack levels used:    1
+   396 ;; This function calls:
+   397 ;;		Nothing
+   398 ;; This function is called by:
+   399 ;;		_main
+   400 ;; This function uses a non-reentrant model
+   401 ;;
+   402                           
+   403                           
+   404                           ;psect for function _abs
+   405  12A                     _abs:	
    406                           
-   407                           ;psect for function _abs
-   408  131                     _abs:	
-   409                           
-   410                           ;main4.c: 22: if(t < 0 ) return -t;
-   411  131  7EA                	btfss	abs@t+1,7
-   412  132  B3F                	goto	l538
-   413  133  249                	comf	abs@t,w
-   414  134  03C                	movwf	28
-   415  135  24A                	comf	abs@t+1,w
-   416  136  03D                	movwf	29
-   417  137  2BC                	incf	28,f
-   418  138  643                	skipnz
-   419  139  2BD                	incf	29,f
-   420  13A  21C                	movf	28,w
-   421  13B  029                	movwf	?_abs
-   422  13C  21D                	movf	29,w
-   423  13D  02A                	movwf	?_abs+1
-   424  13E  800                	retlw	0
-   425  13F                     l538:	
-   426                           
-   427                           ;main4.c: 23: if(t >= 0) return t;
-   428  13F  6EA                	btfsc	abs@t+1,7
-   429  140  800                	retlw	0
-   430  141  800                	retlw	0
-   431  142                     __end_of_abs:	
-   432                           
-   433                           	psect	jmp_tab
-   434  005                     __pjmp_tab:	
-   435                           ;incstack = 0
-   436                           ; Regs used in _abs: [wreg-fsr0h+status,2-btemp+1]
-   437                           
-   438  005                     entry__abs:	
-   439  005  B31                	ljmp	_abs
-   440  006                     entry__Delay_ms:	
-   441                           ;incstack = 0
-   442                           ; Regs used in _Delay_ms: [wreg-fsr0h+status,2+btemp+0+btemp+1]
-   443                           
-   444  006  B42                	ljmp	_Delay_ms
-   445                           
-   446                           	psect	text2
-   447  142                     __ptext2:	
-   448 ;; *************** function _Delay_ms *****************
-   449 ;; Defined at:
-   450 ;;		line 15 in file "main4.c"
-   451 ;; Parameters:    Size  Location     Type
-   452 ;;  DELAY_CNT       2    0[BANK0 ] unsigned int 
-   453 ;; Auto vars:     Size  Location     Type
-   454 ;;  i               2    4[BANK0 ] unsigned int 
-   455 ;; Return value:  Size  Location     Type
-   456 ;;                  1    0[BANK0 ] void 
-   457 ;; Registers used:
-   458 ;;		wreg, fsr0l, fsr0h, status,2, btemp+0, btemp+1
-   459 ;; Tracked objects:
-   460 ;;		On entry : 0/0
-   461 ;;		On exit  : 0/0
-   462 ;;		Unchanged: 0/0
-   463 ;; Data sizes:     COMMON   BANK0
-   464 ;;      Params:         0       2
-   465 ;;      Locals:         0       2
-   466 ;;      Temps:          0       2
-   467 ;;      Totals:         0       6
-   468 ;;Total ram usage:        6 bytes
-   469 ;; Hardware stack levels used:    1
-   470 ;; This function calls:
-   471 ;;		Nothing
-   472 ;; This function is called by:
-   473 ;;		_main
-   474 ;; This function uses a non-reentrant model
-   475 ;;
-   476                           
+   407                           ;main3.c: 22: if(t < 0 ) return -t;
+   408  12A  7EA                	btfss	abs@t+1,7
+   409  12B  B38                	goto	l529
+   410  12C  249                	comf	abs@t,w
+   411  12D  03C                	movwf	28
+   412  12E  24A                	comf	abs@t+1,w
+   413  12F  03D                	movwf	29
+   414  130  2BC                	incf	28,f
+   415  131  643                	skipnz
+   416  132  2BD                	incf	29,f
+   417  133  21C                	movf	28,w
+   418  134  029                	movwf	?_abs
+   419  135  21D                	movf	29,w
+   420  136  02A                	movwf	?_abs+1
+   421  137  800                	retlw	0
+   422  138                     l529:	
+   423                           
+   424                           ;main3.c: 23: if(t >= 0) return t;
+   425  138  6EA                	btfsc	abs@t+1,7
+   426  139  800                	retlw	0
+   427  13A  800                	retlw	0
+   428  13B                     __end_of_abs:	
+   429                           
+   430                           	psect	jmp_tab
+   431  005                     __pjmp_tab:	
+   432                           ;incstack = 0
+   433                           ; Regs used in _abs: [wreg-fsr0h+status,2-btemp+1]
+   434                           
+   435  005                     entry__abs:	
+   436  005  B2A                	ljmp	_abs
+   437  006                     entry__Delay_ms:	
+   438                           ;incstack = 0
+   439                           ; Regs used in _Delay_ms: [wreg-fsr0h+status,2+btemp+0+btemp+1]
+   440                           
+   441  006  B3B                	ljmp	_Delay_ms
+   442                           
+   443                           	psect	text2
+   444  13B                     __ptext2:	
+   445 ;; *************** function _Delay_ms *****************
+   446 ;; Defined at:
+   447 ;;		line 15 in file "main3.c"
+   448 ;; Parameters:    Size  Location     Type
+   449 ;;  DELAY_CNT       2    0[BANK0 ] unsigned int 
+   450 ;; Auto vars:     Size  Location     Type
+   451 ;;  i               2    4[BANK0 ] unsigned int 
+   452 ;; Return value:  Size  Location     Type
+   453 ;;                  1    0[BANK0 ] void 
+   454 ;; Registers used:
+   455 ;;		wreg, fsr0l, fsr0h, status,2, btemp+0, btemp+1
+   456 ;; Tracked objects:
+   457 ;;		On entry : 0/0
+   458 ;;		On exit  : 0/0
+   459 ;;		Unchanged: 0/0
+   460 ;; Data sizes:     COMMON   BANK0
+   461 ;;      Params:         0       2
+   462 ;;      Locals:         0       2
+   463 ;;      Temps:          0       2
+   464 ;;      Totals:         0       6
+   465 ;;Total ram usage:        6 bytes
+   466 ;; Hardware stack levels used:    1
+   467 ;; This function calls:
+   468 ;;		Nothing
+   469 ;; This function is called by:
+   470 ;;		_main
+   471 ;; This function uses a non-reentrant model
+   472 ;;
+   473                           
+   474                           
+   475                           ;psect for function _Delay_ms
+   476  13B                     _Delay_ms:	
    477                           
-   478                           ;psect for function _Delay_ms
-   479  142                     _Delay_ms:	
-   480                           
-   481                           ;main4.c: 16: for (unsigned int i = 0; i < DELAY_CNT; i++) {
-   482  142  06D                	clrf	Delay_ms@i
-   483  143  06E                	clrf	Delay_ms@i+1
-   484  144                     l530:	
-   485  144  20A                	movf	Delay_ms@DELAY_CNT+1,w
-   486  145  03D                	movwf	29
-   487  146  209                	movf	Delay_ms@DELAY_CNT,w
-   488  147  03C                	movwf	28
-   489  148  21D                	movf	29,w
-   490  149  08E                	subwf	Delay_ms@i+1,w
-   491  14A  743                	skipz
-   492  14B  B4E                	goto	u175
-   493  14C  21C                	movf	28,w
-   494  14D  08D                	subwf	Delay_ms@i,w
-   495  14E                     u175:	
-   496  14E  603                	btfsc	3,0
-   497  14F  800                	retlw	0
-   498                           
-   499                           ;main4.c: 17: _delay((unsigned long)((1)*(8000000/4000.0)));
-   500  150  C03                	movlw	3
-   501  151  02C                	movwf	??_Delay_ms+1
-   502  152  C97                	movlw	151
-   503  153  02B                	movwf	??_Delay_ms
-   504  154                     u337:	
-   505  154  2EB                	decfsz	??_Delay_ms,f
-   506  155  B54                	goto	u337
-   507  156  2EC                	decfsz	??_Delay_ms+1,f
-   508  157  B54                	goto	u337
-   509  158  B59                	nop2
-   510  159  C01                	movlw	1
-   511  15A  03C                	movwf	28
-   512  15B  07D                	clrf	29
-   513  15C  21C                	movf	28,w
-   514  15D  1ED                	addwf	Delay_ms@i,f
-   515  15E  603                	skipnc
-   516  15F  2AE                	incf	Delay_ms@i+1,f
-   517  160  21D                	movf	29,w
-   518  161  1EE                	addwf	Delay_ms@i+1,f
-   519  162  B44                	goto	l530
-   520  163                     __end_of_Delay_ms:	
-   521  001C                     btemp	set	28	;btemp
-   522  001C                     wtemp	set	28
-   523  001C                     wtemp0	set	28
-   524  001E                     wtemp1	set	30
-   525  0020                     wtemp2	set	32
-   526  0022                     wtemp3	set	34
-   527  0024                     wtemp4	set	36
-   528  0026                     wtemp5	set	38
-   529  001D                     wtemp6	set	29
-   530  001C                     ttemp	set	28
-   531  001C                     ttemp0	set	28
-   532  001F                     ttemp1	set	31
-   533  0022                     ttemp2	set	34
-   534  0025                     ttemp3	set	37
-   535  001D                     ttemp4	set	29
-   536  001C                     ltemp	set	28
-   537  001C                     ltemp0	set	28
-   538  0020                     ltemp1	set	32
-   539  0024                     ltemp2	set	36
-   540  001E                     ltemp3	set	30
+   478                           ;main3.c: 16: for (unsigned int i = 0; i < DELAY_CNT; i++) {
+   479  13B  06D                	clrf	Delay_ms@i
+   480  13C  06E                	clrf	Delay_ms@i+1
+   481  13D                     l521:	
+   482  13D  20A                	movf	Delay_ms@DELAY_CNT+1,w
+   483  13E  03D                	movwf	29
+   484  13F  209                	movf	Delay_ms@DELAY_CNT,w
+   485  140  03C                	movwf	28
+   486  141  21D                	movf	29,w
+   487  142  08E                	subwf	Delay_ms@i+1,w
+   488  143  743                	skipz
+   489  144  B47                	goto	u145
+   490  145  21C                	movf	28,w
+   491  146  08D                	subwf	Delay_ms@i,w
+   492  147                     u145:	
+   493  147  603                	btfsc	3,0
+   494  148  800                	retlw	0
+   495                           
+   496                           ;main3.c: 17: _delay((unsigned long)((1)*(8000000/4000.0)));
+   497  149  C03                	movlw	3
+   498  14A  02C                	movwf	??_Delay_ms+1
+   499  14B  C97                	movlw	151
+   500  14C  02B                	movwf	??_Delay_ms
+   501  14D                     u277:	
+   502  14D  2EB                	decfsz	??_Delay_ms,f
+   503  14E  B4D                	goto	u277
+   504  14F  2EC                	decfsz	??_Delay_ms+1,f
+   505  150  B4D                	goto	u277
+   506  151  B52                	nop2
+   507  152  C01                	movlw	1
+   508  153  03C                	movwf	28
+   509  154  07D                	clrf	29
+   510  155  21C                	movf	28,w
+   511  156  1ED                	addwf	Delay_ms@i,f
+   512  157  603                	skipnc
+   513  158  2AE                	incf	Delay_ms@i+1,f
+   514  159  21D                	movf	29,w
+   515  15A  1EE                	addwf	Delay_ms@i+1,f
+   516  15B  B3D                	goto	l521
+   517  15C                     __end_of_Delay_ms:	
+   518  001C                     btemp	set	28	;btemp
+   519  001C                     wtemp	set	28
+   520  001C                     wtemp0	set	28
+   521  001E                     wtemp1	set	30
+   522  0020                     wtemp2	set	32
+   523  0022                     wtemp3	set	34
+   524  0024                     wtemp4	set	36
+   525  0026                     wtemp5	set	38
+   526  001D                     wtemp6	set	29
+   527  001C                     ttemp	set	28
+   528  001C                     ttemp0	set	28
+   529  001F                     ttemp1	set	31
+   530  0022                     ttemp2	set	34
+   531  0025                     ttemp3	set	37
+   532  001D                     ttemp4	set	29
+   533  001C                     ltemp	set	28
+   534  001C                     ltemp0	set	28
+   535  0020                     ltemp1	set	32
+   536  0024                     ltemp2	set	36
+   537  001E                     ltemp3	set	30
 
 
 Data Sizes:
@@ -576,7 +573,7 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
  ---------------------------------------------------------------------------------
- (0) _main                                                 5     5      0     470
+ (0) _main                                                 5     5      0     379
                                               6 BANK0      5     5      0
                            _Delay_ms
                                 _abs
@@ -612,36 +609,36 @@ ABS                  0      0       0       6        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.38 build -256452561 
-Symbol Table                                                                                   Sun Nov 27 20:17:46 2016
+Symbol Table                                                                                   Sun Nov 27 20:56:19 2016
 
             __CFG_CP$OFF 0000                       _GO 0039                       fsr 0004  
-                    l530 0144                      l610 01FC                      l606 01F7  
-                    l608 01F9                      l538 013F                      l580 0190  
-                    l564 0177                      l594 01A4                      l578 018E  
-                    l588 0199                      l596 01A6                      _GP1 0031  
-                    _GP2 0032                      _GP3 0033                      u305 01C2  
-                    u315 01E0                      u325 01F3                      u175 014E  
-                    u337 0154                      u295 01B3                      _abs 0131  
-                   ?_abs 0009                     _ADON 0038                     _CHS0 003A  
-                   _CHS1 003B                     _ANS0 003E                     _ANS1 003F  
-                   abs@t 0009                     _main 0163                     btemp 001C  
-                   ltemp 001C                     start 0002                     ttemp 001C  
-                   wtemp 001C            __CFG_MCPU$OFF 0000                    ??_abs 0000  
-                  ?_main 0009                    _ADRES 0008            __CFG_WDTE$OFF 0000  
-                  _nDONE 0039                    ltemp0 001C                    ltemp1 0020  
-                  ltemp2 0024                    ltemp3 001E                    ttemp0 001C  
-                  ttemp1 001F                    ttemp2 0022                    ttemp3 0025  
-                  ttemp4 001D                    status 0003                    wtemp0 001C  
-                  wtemp1 001E                    wtemp2 0020                    wtemp3 0022  
-                  wtemp4 0024                    wtemp5 0026                    wtemp6 001D  
-      Delay_ms@DELAY_CNT 0009         __end_of_Delay_ms 0163           __CFG_MCLRE$OFF 0000  
-        __initialization 0003             __end_of_main 01FF                   ??_main 000F  
-                 _OPTION 0000            main@max_width 0011  __end_of__initialization 0003  
-         __pcstackCOMMON 0000                ?_Delay_ms 0009               __pmaintext 0163  
-             ??_Delay_ms 000B                  __ptext1 0131                  __ptext2 0142  
-           __size_of_abs 0011     end_of_initialization 0003                Delay_ms@i 000D  
-             main@width0 0013               main@width1 0010      start_initialization 0003  
-            __end_of_abs 0142         __CFG_IOSCFS$8MHZ 0000        __size_of_Delay_ms 0021  
-         entry__Delay_ms 0006                ___latbits 0000            __pcstackBANK0 0009  
-              __pjmp_tab 0005                 _TRISGPIO 0006                 _Delay_ms 0142  
-              entry__abs 0005            __size_of_main 009C  
+                    l521 013D                      l529 0138                      l555 0170  
+                    l591 01F9                      l575 019B                      l567 0192  
+                    l593 01FC                      l577 01A4                      l569 0194  
+                    l579 01A6                      l589 01F7                      _GP1 0031  
+                    _GP2 0032                      _GP3 0033                      u145 0147  
+                    u235 01B3                      u245 01C2                      u255 01E0  
+                    u175 017D                      u265 01F3                      u277 014D  
+                    _abs 012A                     ?_abs 0009                     _ADON 0038  
+                   _CHS0 003A                     _CHS1 003B                     _ANS0 003E  
+                   _ANS1 003F                     abs@t 0009                     _main 015C  
+                   btemp 001C                     ltemp 001C                     start 0002  
+                   ttemp 001C                     wtemp 001C            __CFG_MCPU$OFF 0000  
+                  ??_abs 0000                    ?_main 0009                    _ADRES 0008  
+          __CFG_WDTE$OFF 0000                    _nDONE 0039                    ltemp0 001C  
+                  ltemp1 0020                    ltemp2 0024                    ltemp3 001E  
+                  ttemp0 001C                    ttemp1 001F                    ttemp2 0022  
+                  ttemp3 0025                    ttemp4 001D                    status 0003  
+                  wtemp0 001C                    wtemp1 001E                    wtemp2 0020  
+                  wtemp3 0022                    wtemp4 0024                    wtemp5 0026  
+                  wtemp6 001D        Delay_ms@DELAY_CNT 0009         __end_of_Delay_ms 015C  
+         __CFG_MCLRE$OFF 0000          __initialization 0003             __end_of_main 01FF  
+                 ??_main 000F                   _OPTION 0000            main@max_width 0012  
+__end_of__initialization 0003           __pcstackCOMMON 0000                ?_Delay_ms 0009  
+             __pmaintext 015C               ??_Delay_ms 000B                  __ptext1 012A  
+                __ptext2 013B             __size_of_abs 0011     end_of_initialization 0003  
+              Delay_ms@i 000D      start_initialization 0003              __end_of_abs 013B  
+       __CFG_IOSCFS$8MHZ 0000        __size_of_Delay_ms 0021           entry__Delay_ms 0006  
+              ___latbits 0000            __pcstackBANK0 0009                __pjmp_tab 0005  
+               _TRISGPIO 0006                main@width 0010                 _Delay_ms 013B  
+              entry__abs 0005            __size_of_main 00A3  

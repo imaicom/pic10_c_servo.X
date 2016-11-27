@@ -7,7 +7,7 @@
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 /Applications/microchip/xc8/v1.38/sources/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"15 /Users/imai/MPLABXProjects/pic10_c_servo.X/main4.c
+"15 /Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
 [v _Delay_ms Delay_ms `(v  1 s 1 Delay_ms ]
 "21
 [v _abs abs `(i  1 s 2 abs ]
@@ -39,16 +39,14 @@
 [v _GP3 GP3 `VEb  1 e 0 @51 ]
 "539
 [v _nDONE nDONE `VEb  1 e 0 @57 ]
-"26 /Users/imai/MPLABXProjects/pic10_c_servo.X/main4.c
+"26 /Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
 [v _main main `(v  1 e 1 0 ]
 {
-"30
-[v main@max_width max_width `i  1 a 2 8 ]
-"28
-[v main@width0 width0 `uc  1 a 1 10 ]
 "29
-[v main@width1 width1 `uc  1 a 1 7 ]
-"74
+[v main@max_width max_width `i  1 a 2 9 ]
+"28
+[v main@width width `i  1 a 2 7 ]
+"72
 } 0
 "21
 [v _abs abs `(i  1 s 2 abs ]

@@ -198,7 +198,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="main3.c" ex="true" overriding="false">
+      <item path="main4.c" ex="true" overriding="false">
       </item>
     </conf>
   </confs>
