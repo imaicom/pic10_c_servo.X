@@ -11,11 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcQnOgkgy.obj
-reset_wrap ENTRY 0 0 0 2 2
-reset_vec CODE 0 1FF 1FF 1 2
-end_init ENTRY 0 2 2 1 2
-config CONFIG 0 FFF FFF 1 2
 $dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 cinit ENTRY 0 3 3 2 2
 text1 CODE 0 12A 12A 11 2
@@ -23,6 +18,11 @@ text2 CODE 0 13B 13B 21 2
 maintext CODE 0 15C 15C A3 2
 cstackBANK0 BANK0 1 9 9 B 1
 jmp_tab ENTRY 0 5 5 2 2
+$/tmp/xcF4CXu3w.obj
+reset_wrap ENTRY 0 0 0 2 2
+reset_vec CODE 0 1FF 1FF 1 2
+end_init ENTRY 0 2 2 1 2
+config CONFIG 0 FFF FFF 1 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -52,11 +52,11 @@ STRING 7-FF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-3 cinit ENTRY >103:/tmp/xcGjaCgun
-3 cinit ENTRY >106:/tmp/xcGjaCgun
-3 cinit ENTRY >112:/tmp/xcGjaCgun
-3 cinit ENTRY >114:/tmp/xcGjaCgun
-4 cinit ENTRY >115:/tmp/xcGjaCgun
+3 cinit ENTRY >103:/tmp/xcTyRmoEu
+3 cinit ENTRY >106:/tmp/xcTyRmoEu
+3 cinit ENTRY >112:/tmp/xcTyRmoEu
+3 cinit ENTRY >114:/tmp/xcTyRmoEu
+4 cinit ENTRY >115:/tmp/xcTyRmoEu
 13B text2 CODE >16:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
 149 text2 CODE >17:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
 152 text2 CODE >16:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
@@ -122,12 +122,12 @@ _ANS0 3E 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 _ANS1 3F 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 _CHS0 3A 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 _CHS1 3B 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcQnOgkgy.obj
+___sp 0 0 STACK 2 stack /tmp/xcF4CXu3w.obj
 _main 2B8 0 CODE 0 maintext dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 abs@t 9 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 btemp 1C 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 ltemp 1C 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-start 4 0 ENTRY 0 init /tmp/xcQnOgkgy.obj
+start 4 0 ENTRY 0 init /tmp/xcF4CXu3w.obj
 ttemp 1C 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 wtemp 1C 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
@@ -161,7 +161,7 @@ entry__abs A 0 ENTRY 0 jmp_tab dist/XC8_PIC10F222/production/pic10_c_servo.X.pro
 _OPTION 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __end_of_Delay_ms 2B8 0 CODE 0 text2 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __pcstackBANK0 9 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcQnOgkgy.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcF4CXu3w.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hcinit A 0 ENTRY 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
@@ -193,15 +193,15 @@ __S1 14 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 _abs 254 0 CODE 0 text1 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __end_of_abs 276 0 CODE 0 text1 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-reset_vec 3FE 0 CODE 0 reset_vec /tmp/xcQnOgkgy.obj
+reset_vec 3FE 0 CODE 0 reset_vec /tmp/xcF4CXu3w.obj
 __pmaintext 2B8 0 CODE 0 maintext dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1FFE 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 main@width 10 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-stackhi 0 0 ABS 0 - /tmp/xcQnOgkgy.obj
-stacklo 0 0 ABS 0 - /tmp/xcQnOgkgy.obj
+stackhi 0 0 ABS 0 - /tmp/xcF4CXu3w.obj
+stacklo 0 0 ABS 0 - /tmp/xcF4CXu3w.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
