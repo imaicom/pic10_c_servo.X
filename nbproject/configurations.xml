@@ -13,6 +13,7 @@
       <itemPath>main.c</itemPath>
       <itemPath>main2.c</itemPath>
       <itemPath>main3.c</itemPath>
+      <itemPath>main4.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -196,6 +197,8 @@
         </HI-TECH-LINK>
         <XC8-config-global>
         </XC8-config-global>
+      </item>
+      <item path="main3.c" ex="true" overriding="false">
       </item>
     </conf>
   </confs>

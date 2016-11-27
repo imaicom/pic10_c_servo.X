@@ -25,7 +25,8 @@ static int abs(int t) {
 
 void main(void) {
     
-    int width = 0;
+    char width0 = 0;
+    char width1 = 0;
     int max_width = 0;
     
     OPTION = 0b11000000;
@@ -41,16 +42,18 @@ void main(void) {
      
     while(1) {
         
-        if((width > 0)&&(GP3 == 0)) {
-            GP2 = 1; GP1 = 1; // Lock
-            max_width = width - 110;
-            width = 0;
+        if((width1 > 0)&&(width0 > 0)&&(GP3 == 0)) {
+            max_width = (int)width1*256 + (int)width0 - 110;
+            width1 = 0;
+            width0 = 0;
             GO = 1; // start conversion
             while(nDONE);  // wait conversion
         };
 
-        if((width == 0)&&(GP3 == 1)) {
-            while(GP3) width++;
+        if((width1 == 0)&&(width0 == 0)&&(GP3 == 1)) {
+            while(GP3) {
+                width0++; if(width0==0) width1++;
+            };
         };
                    
         if((35 <= max_width)&&(max_width < 240)) {
