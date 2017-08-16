@@ -1,20 +1,20 @@
-Microchip MPLAB XC8 Compiler V1.38 ()
+Microchip MPLAB XC8 Compiler V1.43 ()
 
 Linker command line:
 
---edf=/Applications/microchip/xc8/v1.38/dat/en_msgs.txt -cs \
+--edf=/Applications/microchip/xc8/v1.43/dat/en_msgs.txt -cs \
   -h+dist/XC8_PIC10F222/production/pic10_c_servo.X.production.sym \
   --cmf=dist/XC8_PIC10F222/production/pic10_c_servo.X.production.cmf -z \
-  -Q10F222 -o/tmp/xcRfzhO7c \
+  -Q10F222 -o/tmp/xcX3sKaEI \
   -Mdist/XC8_PIC10F222/production/pic10_c_servo.X.production.map -E1 \
-  -ver=XC8 -ASTACK=014h-01bh -pstack=STACK -ACODE=00h-01FEh \
+  -ver=XC8 -ASTACK=018h-01bh -pstack=STACK -ACODE=00h-01FEh \
   -ASTRCODE=00h-01FEh -ASTRING=00h-0FFh -AENTRY=00h-0FFh-01FEh \
   -ABANK0=09h-01Dh -ARAM=09h-01Dh -AABS1=09h-01Fh -ACOMMON=01Ch-01Fh \
   -ASFR0=00h-08h \
   -preset_vec=01ffh,reset_wrap=0h,init,end_init,cinit,clrtext \
   -ppowerup=CODE -pfunctab=ENTRY -ACONFIG=0FFFh-0FFFh -pconfig=CONFIG \
   -DCONFIG=2 -AIDLOC=0200h-0203h -pidloc=IDLOC -DIDLOC=2 -pstrings=-STRING \
-  -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcm8RdSIX.obj \
+  -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcQ1ErFZM.obj \
   dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj 
 
 Object code version is 3.11
@@ -24,27 +24,27 @@ Machine type is 10F222
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcm8RdSIX.obj
+/tmp/xcQ1ErFZM.obj
                 end_init                              2        2        1        0       0
                 reset_wrap                            0        0        2        0       0
                 reset_vec                           1FF      1FF        1      3FE       0
                 config                              FFF      FFF        1     1FFE       0
 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
                 cinit                                 3        3        2        0       0
-                text2                               13B      13B       21      276       0
+                text2                                D0       D0       21      1A0       0
                 jmp_tab                               5        5        2        0       0
-                text1                               12A      12A       11      254       0
-                maintext                            15C      15C       A3      2B8       0
-                cstackBANK0                           9        9        B        9       1
+                text1                                BF       BF       11      17E       0
+                maintext                             F1       F1      10E      1E2       0
+                cstackBANK0                           9        9        F        9       1
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 reset_vec                           1FF      1FF        1         0
-                text2                               13B      13B       21         0
-                text1                               12A      12A       11         0
-                maintext                            15C      15C       A3         0
+                text2                                D0       D0       21         0
+                text1                                BF       BF       11         0
+                maintext                             F1       F1      10E         0
 
         CLASS   STRCODE        
 
@@ -57,7 +57,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 jmp_tab                               5        5        2         0
 
         CLASS   BANK0          
-                cstackBANK0                           9        9        B         1
+                cstackBANK0                           9        9        F         1
 
         CLASS   RAM            
 
@@ -80,10 +80,10 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_wrap                     000000  000007  000007         0       0  ENTRY       2
-                cstackBANK0                    000009  00000B  000014         9       1  BANK0       1
-                text1                          00012A  000011  00013B       254       0  CODE        2
-                text2                          00013B  000021  00015C       276       0  CODE        2
-                maintext                       00015C  0000A3  0001FF       2B8       0  CODE        2
+                cstackBANK0                    000009  00000F  000018         9       1  BANK0       1
+                text1                          0000BF  000011  0000D0       17E       0  CODE        2
+                text2                          0000D0  000021  0000F1       1A0       0  CODE        2
+                maintext                       0000F1  00010E  0001FF       1E2       0  CODE        2
                 reset_vec                      0001FF  000001  000200       3FE       0  CODE        2
                 config                         000FFF  000001  001000      1FFE       0  CONFIG      2
 
@@ -91,15 +91,15 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            0014-001B              8           1
-        CODE             0007-0129            123           2
-        ENTRY            0007-00FF+002A         F9           2
+        BANK0            0018-001B              4           1
+        CODE             0007-00BE             B8           2
+        ENTRY            0007-00BE             B8           2
         IDLOC            0200-0203              4           2
-        RAM              0014-001B              8           1
+        RAM              0018-001B              4           1
         SFR0             0000-0008              9           1
-        STACK            0014-001B              8           1
-        STRCODE          0007-0129            123           2
-        STRING           0007-00FF             F9           2
+        STACK            0018-001B              4           1
+        STRCODE          0007-00BE             B8           2
+        STRING           0007-00BE             B8           2
 
                                   Symbol Table
 
@@ -112,7 +112,7 @@ _ANS0                    (abs)        003E
 _ANS1                    (abs)        003F
 _CHS0                    (abs)        003A
 _CHS1                    (abs)        003B
-_Delay_ms                text2        013B
+_Delay_ms                text2        00D0
 _GO                      (abs)        0039
 _GP1                     (abs)        0031
 _GP2                     (abs)        0032
@@ -145,7 +145,7 @@ __Hreset_vec             reset_vec    0200
 __Hreset_wrap            reset_wrap   0002
 __Hsfr0                  sfr0         0000
 __Hspace_0               (abs)        1000
-__Hspace_1               (abs)        0014
+__Hspace_1               (abs)        0018
 __Hspace_2               (abs)        0000
 __Hstack                 stack        0000
 __Hstrings               strings      0000
@@ -177,59 +177,45 @@ __Lstack                 stack        0000
 __Lstrings               strings      0000
 __Ltext                  text         0000
 __S0                     (abs)        1000
-__S1                     (abs)        0014
+__S1                     (abs)        0018
 __S2                     (abs)        0000
 ___int_sp                stack        0000
 ___latbits               (abs)        0000
 ___sp                    stack        0000
-__end_of_Delay_ms        text2        015C
+__end_of_Delay_ms        text2        00F1
 __end_of__initialization cinit        0003
-__end_of_abs             text1        013B
+__end_of_abs             text1        00D0
 __end_of_main            maintext     01FF
 __initialization         cinit        0003
 __pcstackBANK0           cstackBANK0  0009
 __pcstackCOMMON          cstackCOMMON 0000
 __pjmp_tab               jmp_tab      0005
-__pmaintext              maintext     015C
-__ptext1                 text1        012A
-__ptext2                 text2        013B
+__pmaintext              maintext     00F1
+__ptext1                 text1        00BF
+__ptext2                 text2        00D0
 __size_of_Delay_ms       (abs)        0000
 __size_of_abs            (abs)        0000
 __size_of_main           (abs)        0000
-_abs                     text1        012A
-_main                    maintext     015C
+_abs                     text1        00BF
+_main                    maintext     00F1
 _nDONE                   (abs)        0039
 abs@t                    cstackBANK0  0009
 btemp                    (abs)        001C
 end_of_initialization    cinit        0003
 entry__Delay_ms          jmp_tab      0006
 entry__abs               jmp_tab      0005
-ltemp                    (abs)        001C
 ltemp0                   (abs)        001C
-ltemp1                   (abs)        0020
-ltemp2                   (abs)        0024
-ltemp3                   (abs)        001E
-main@max_width           cstackBANK0  0012
-main@width               cstackBANK0  0010
+main@max_width           cstackBANK0  0016
+main@panicTimer          cstackBANK0  0010
+main@width               cstackBANK0  0014
 reset_vec                reset_vec    01FF
 stackhi                  (abs)        0000
 stacklo                  (abs)        0000
 start                    init         0002
 start_initialization     cinit        0003
-ttemp                    (abs)        001C
 ttemp0                   (abs)        001C
-ttemp1                   (abs)        001F
-ttemp2                   (abs)        0022
-ttemp3                   (abs)        0025
-ttemp4                   (abs)        001D
-wtemp                    (abs)        001C
 wtemp0                   (abs)        001C
 wtemp1                   (abs)        001E
-wtemp2                   (abs)        0020
-wtemp3                   (abs)        0022
-wtemp4                   (abs)        0024
-wtemp5                   (abs)        0026
-wtemp6                   (abs)        001D
 
 
 FUNCTION INFORMATION:
@@ -240,10 +226,11 @@ FUNCTION INFORMATION:
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  max_width       2    9[BANK0 ] int 
-  width           2    7[BANK0 ] int 
+  panicTimer      4    7[BANK0 ] long 
+  max_width       2   13[BANK0 ] int 
+  width           2   11[BANK0 ] int 
  Return value:  Size  Location     Type
-                  1   41[None  ] void 
+                  1   43[None  ] void 
  Registers used:
 		wreg, fsr0l, fsr0h, status,2, status,0, btemp+0, btemp+1, btemp+2, btemp+3, pclath, cstack
  Tracked objects:
@@ -252,10 +239,10 @@ FUNCTION INFORMATION:
 		Unchanged: 
  Data sizes:     COMMON   BANK0
       Params:         0       0
-      Locals:         0       4
+      Locals:         0       8
       Temps:          0       1
-      Totals:         0       5
-Total ram usage:        5 bytes
+      Totals:         0       9
+Total ram usage:        9 bytes
  Hardware stack levels required when called:    1
  This function calls:
 		_Delay_ms
@@ -328,11 +315,11 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 main3.c
-		_abs           		CODE           	012A	0000	18
-		_main          		CODE           	015C	0000	164
-		_Delay_ms      		CODE           	013B	0000	34
+		_abs           		CODE           	00BF	0000	18
+		_main          		CODE           	00F1	0000	271
+		_Delay_ms      		CODE           	00D0	0000	34
 
-main3.c estimated size: 216
+main3.c estimated size: 323
 
 shared
 		__initialization		ENTRY          	0003	0000	1

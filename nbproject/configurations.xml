@@ -33,7 +33,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.38</languageToolchainVersion>
+        <languageToolchainVersion>1.43</languageToolchainVersion>
         <platform>4</platform>
       </toolsSet>
       <compileType>
@@ -67,6 +67,7 @@
         <property key="extra-include-directories" value=""/>
         <property key="favor-optimization-for" value="+speed,-space"/>
         <property key="identifier-length" value="255"/>
+        <property key="local-generation" value="false"/>
         <property key="operation-mode" value="pro"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
         <property key="optimization-assembler" value="true"/>
@@ -140,6 +141,7 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>

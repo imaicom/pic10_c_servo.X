@@ -27,6 +27,7 @@ void main(void) {
     
     int width = 0;
     int max_width = 0;
+    long int panicTimer = 0;
     
     OPTION = 0b11000000;
    
@@ -55,7 +56,13 @@ void main(void) {
                    
         if((35 <= max_width)&&(max_width < 240)) {
             
-            if(abs(ADRES - max_width) > 15) {
+            if(abs(ADRES - max_width) > 30) {
+                panicTimer = 10000;
+            };
+            
+            panicTimer--;if (panicTimer < 0) panicTimer = 0;
+            
+            if((abs(ADRES - max_width) > 15)&&(panicTimer > 0)) {
                 
                 if(ADRES > max_width) {
                     GP2 = 1; GP1 = 0;
