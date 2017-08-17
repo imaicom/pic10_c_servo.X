@@ -413,9 +413,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "59
 [e $ ! > ( _abs (1 - -> _ADRES `i _max_width -> 30 `i 45  ]
 {
-[; ;main3.c: 60: panicTimer = 10000;
+[; ;main3.c: 60: panicTimer = 40000;
 "60
-[e = _panicTimer -> -> 10000 `i `l ]
+[e = _panicTimer -> 40000 `l ]
 "61
 }
 [e :U 45 ]
