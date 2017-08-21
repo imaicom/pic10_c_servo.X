@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.43 build -156212558 
-                                                                                               Thu Aug 17 18:59:48 2017
+                                                                                               Mon Aug 21 16:49:55 2017
 
 Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250354
      1                           	processor	10F222
@@ -359,7 +359,7 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    345  167  603                	skipnc
    346  168  BFC                	goto	l625
    347                           
-   348                           ;main3.c: 59: if(abs(ADRES - max_width) > 30) {
+   348                           ;main3.c: 59: if(abs(ADRES - max_width) > 25) {
    349  169  256                	comf	main@max_width,w
    350  16A  03C                	movwf	28
    351  16B  257                	comf	main@max_width+1,w
@@ -386,18 +386,18 @@ Microchip Technology Omniscient Code Generator v1.43 (Free mode) build 201707250
    372  180  09C                	subwf	28,w
    373  181  743                	skipz
    374  182  B85                	goto	u285
-   375  183  C1F                	movlw	31
+   375  183  C1A                	movlw	26
    376  184  09E                	subwf	30,w
    377  185                     u285:	
    378  185  703                	skipc
    379  186  B97                	goto	l607
    380                           
-   381                           ;main3.c: 60: panicTimer = 40000;
-   382  187  C40                	movlw	64
+   381                           ;main3.c: 60: panicTimer = 80000;
+   382  187  C80                	movlw	128
    383  188  03C                	movwf	28
-   384  189  C9C                	movlw	156
+   384  189  C38                	movlw	56
    385  18A  03D                	movwf	29
-   386  18B  C00                	movlw	0
+   386  18B  C01                	movlw	1
    387  18C  03E                	movwf	30
    388  18D  C00                	movlw	0
    389  18E  03F                	movwf	31
@@ -763,7 +763,7 @@ DATA                 0      0       0       6        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.43 build -156212558 
-Symbol Table                                                                                   Thu Aug 17 18:59:48 2017
+Symbol Table                                                                                   Mon Aug 21 16:49:55 2017
 
             __CFG_CP$OFF 0000                       _GO 0039                       fsr 0004  
                     l621 01F7                      l613 01B4                      l623 01F9  

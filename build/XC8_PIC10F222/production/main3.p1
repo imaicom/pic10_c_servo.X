@@ -409,13 +409,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 "57
 [e $ ! && <= -> 35 `i _max_width < _max_width -> 240 `i 44  ]
 {
-[; ;main3.c: 59: if(abs(ADRES - max_width) > 30) {
+[; ;main3.c: 59: if(abs(ADRES - max_width) > 25) {
 "59
-[e $ ! > ( _abs (1 - -> _ADRES `i _max_width -> 30 `i 45  ]
+[e $ ! > ( _abs (1 - -> _ADRES `i _max_width -> 25 `i 45  ]
 {
-[; ;main3.c: 60: panicTimer = 40000;
+[; ;main3.c: 60: panicTimer = 80000;
 "60
-[e = _panicTimer -> 40000 `l ]
+[e = _panicTimer -> 80000 `l ]
 "61
 }
 [e :U 45 ]

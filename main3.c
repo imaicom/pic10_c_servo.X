@@ -56,8 +56,8 @@ void main(void) {
                    
         if((35 <= max_width)&&(max_width < 240)) {
             
-            if(abs(ADRES - max_width) > 30) {
-                panicTimer = 40000;// 20000
+            if(abs(ADRES - max_width) > 25) {//30
+                panicTimer = 80000;// 20000 40000
             };
             
             panicTimer--;if (panicTimer < 0) panicTimer = 0;

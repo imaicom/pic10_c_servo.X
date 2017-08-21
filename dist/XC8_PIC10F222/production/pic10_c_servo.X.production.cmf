@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcRgQCpYo.obj
+$/tmp/xc5HZoW1t.obj
 reset_wrap ENTRY 0 0 0 2 2
 reset_vec CODE 0 1FF 1FF 1 2
 end_init ENTRY 0 2 2 1 2
@@ -52,11 +52,11 @@ STRING 7-BE 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-3 cinit ENTRY >87:/tmp/xcShM3txZ
-3 cinit ENTRY >90:/tmp/xcShM3txZ
-3 cinit ENTRY >96:/tmp/xcShM3txZ
-3 cinit ENTRY >98:/tmp/xcShM3txZ
-4 cinit ENTRY >99:/tmp/xcShM3txZ
+3 cinit ENTRY >87:/tmp/xcvQd0oyS
+3 cinit ENTRY >90:/tmp/xcvQd0oyS
+3 cinit ENTRY >96:/tmp/xcvQd0oyS
+3 cinit ENTRY >98:/tmp/xcvQd0oyS
+4 cinit ENTRY >99:/tmp/xcvQd0oyS
 D0 text2 CODE >16:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
 DE text2 CODE >17:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
 E7 text2 CODE >16:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
@@ -123,11 +123,11 @@ _ANS0 3E 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 _ANS1 3F 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 _CHS0 3A 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 _CHS1 3B 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcRgQCpYo.obj
+___sp 0 0 STACK 2 stack /tmp/xc5HZoW1t.obj
 _main 1E2 0 CODE 0 maintext dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 abs@t 9 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 btemp 1C 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-start 4 0 ENTRY 0 init /tmp/xcRgQCpYo.obj
+start 4 0 ENTRY 0 init /tmp/xc5HZoW1t.obj
 __size_of_main 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __CFG_MCPU$OFF 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
@@ -150,7 +150,7 @@ entry__abs A 0 ENTRY 0 jmp_tab dist/XC8_PIC10F222/production/pic10_c_servo.X.pro
 _OPTION 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __end_of_Delay_ms 1E2 0 CODE 0 text2 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __pcstackBANK0 9 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcRgQCpYo.obj
+___int_sp 0 0 STACK 2 stack /tmp/xc5HZoW1t.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hcinit A 0 ENTRY 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
@@ -183,15 +183,15 @@ __S1 18 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 _abs 17E 0 CODE 0 text1 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __end_of_abs 1A0 0 CODE 0 text1 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-reset_vec 3FE 0 CODE 0 reset_vec /tmp/xcRgQCpYo.obj
+reset_vec 3FE 0 CODE 0 reset_vec /tmp/xc5HZoW1t.obj
 __pmaintext 1E2 0 CODE 0 maintext dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1FFE 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 main@width 14 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-stackhi 0 0 ABS 0 - /tmp/xcRgQCpYo.obj
-stacklo 0 0 ABS 0 - /tmp/xcRgQCpYo.obj
+stackhi 0 0 ABS 0 - /tmp/xc5HZoW1t.obj
+stacklo 0 0 ABS 0 - /tmp/xc5HZoW1t.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
