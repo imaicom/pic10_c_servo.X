@@ -5,7 +5,7 @@ Linker command line:
 --edf=/Applications/microchip/xc8/v1.43/dat/en_msgs.txt -cs \
   -h+dist/XC8_PIC10F222/production/pic10_c_servo.X.production.sym \
   --cmf=dist/XC8_PIC10F222/production/pic10_c_servo.X.production.cmf -z \
-  -Q10F222 -o/tmp/xcJCX4mgH \
+  -Q10F222 -o/tmp/xcxpoW8MF \
   -Mdist/XC8_PIC10F222/production/pic10_c_servo.X.production.map -E1 \
   -ver=XC8 -ASTACK=018h-01bh -pstack=STACK -ACODE=00h-01FEh \
   -ASTRCODE=00h-01FEh -ASTRING=00h-0FFh -AENTRY=00h-0FFh-01FEh \
@@ -14,7 +14,7 @@ Linker command line:
   -preset_vec=01ffh,reset_wrap=0h,init,end_init,cinit,clrtext \
   -ppowerup=CODE -pfunctab=ENTRY -ACONFIG=0FFFh-0FFFh -pconfig=CONFIG \
   -DCONFIG=2 -AIDLOC=0200h-0203h -pidloc=IDLOC -DIDLOC=2 -pstrings=-STRING \
-  -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xc5HZoW1t.obj \
+  -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcwAqjNMT.obj \
   dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj 
 
 Object code version is 3.11
@@ -24,7 +24,7 @@ Machine type is 10F222
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xc5HZoW1t.obj
+/tmp/xcwAqjNMT.obj
                 end_init                              2        2        1        0       0
                 reset_wrap                            0        0        2        0       0
                 reset_vec                           1FF      1FF        1      3FE       0

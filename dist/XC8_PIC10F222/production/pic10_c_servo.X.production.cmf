@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xc5HZoW1t.obj
+$/tmp/xcwAqjNMT.obj
 reset_wrap ENTRY 0 0 0 2 2
 reset_vec CODE 0 1FF 1FF 1 2
 end_init ENTRY 0 2 2 1 2
@@ -52,51 +52,51 @@ STRING 7-BE 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-3 cinit ENTRY >87:/tmp/xcvQd0oyS
-3 cinit ENTRY >90:/tmp/xcvQd0oyS
-3 cinit ENTRY >96:/tmp/xcvQd0oyS
-3 cinit ENTRY >98:/tmp/xcvQd0oyS
-4 cinit ENTRY >99:/tmp/xcvQd0oyS
-D0 text2 CODE >16:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-DE text2 CODE >17:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-E7 text2 CODE >16:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-5 jmp_tab ENTRY >21:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-6 jmp_tab ENTRY >15:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-BF text1 CODE >21:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-BF text1 CODE >22:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-CD text1 CODE >23:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-CF text1 CODE >24:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-F1 maintext CODE >26:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-F1 maintext CODE >28:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-F3 maintext CODE >29:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-F5 maintext CODE >30:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-105 maintext CODE >32:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-107 maintext CODE >34:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-109 maintext CODE >35:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-10A maintext CODE >36:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-10B maintext CODE >37:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-10D maintext CODE >38:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-10E maintext CODE >40:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-110 maintext CODE >41:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-115 maintext CODE >45:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-125 maintext CODE >46:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-127 maintext CODE >47:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-134 maintext CODE >48:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-136 maintext CODE >49:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-137 maintext CODE >50:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-139 maintext CODE >53:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-140 maintext CODE >54:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-14B maintext CODE >57:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-169 maintext CODE >59:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-187 maintext CODE >60:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-197 maintext CODE >63:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-1B4 maintext CODE >65:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-1E2 maintext CODE >67:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-1F5 maintext CODE >68:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-1F7 maintext CODE >70:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-1F9 maintext CODE >73:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-1FB maintext CODE >75:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
-1FE maintext CODE >43:/Users/meka/MPLABXProjects/pic10_c_servo.X/main3.c
+3 cinit ENTRY >87:/tmp/xcmQbsvBl
+3 cinit ENTRY >90:/tmp/xcmQbsvBl
+3 cinit ENTRY >96:/tmp/xcmQbsvBl
+3 cinit ENTRY >98:/tmp/xcmQbsvBl
+4 cinit ENTRY >99:/tmp/xcmQbsvBl
+D0 text2 CODE >16:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+DE text2 CODE >17:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+E7 text2 CODE >16:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+5 jmp_tab ENTRY >21:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+6 jmp_tab ENTRY >15:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+BF text1 CODE >21:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+BF text1 CODE >22:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+CD text1 CODE >23:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+CF text1 CODE >24:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+F1 maintext CODE >26:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+F1 maintext CODE >28:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+F3 maintext CODE >29:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+F5 maintext CODE >30:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+105 maintext CODE >32:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+107 maintext CODE >34:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+109 maintext CODE >35:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+10A maintext CODE >36:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+10B maintext CODE >37:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+10D maintext CODE >38:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+10E maintext CODE >40:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+110 maintext CODE >41:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+115 maintext CODE >45:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+125 maintext CODE >46:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+127 maintext CODE >47:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+134 maintext CODE >48:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+136 maintext CODE >49:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+137 maintext CODE >50:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+139 maintext CODE >53:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+140 maintext CODE >54:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+14B maintext CODE >57:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+169 maintext CODE >59:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+187 maintext CODE >60:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+197 maintext CODE >63:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+1B4 maintext CODE >65:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+1E2 maintext CODE >67:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+1F5 maintext CODE >68:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+1F7 maintext CODE >70:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+1F9 maintext CODE >73:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+1FB maintext CODE >75:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
+1FE maintext CODE >43:/Users/imai/MPLABXProjects/pic10_c_servo.X/main3.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -123,11 +123,11 @@ _ANS0 3E 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 _ANS1 3F 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 _CHS0 3A 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 _CHS1 3B 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xc5HZoW1t.obj
+___sp 0 0 STACK 2 stack /tmp/xcwAqjNMT.obj
 _main 1E2 0 CODE 0 maintext dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 abs@t 9 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 btemp 1C 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-start 4 0 ENTRY 0 init /tmp/xc5HZoW1t.obj
+start 4 0 ENTRY 0 init /tmp/xcwAqjNMT.obj
 __size_of_main 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __CFG_MCPU$OFF 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
@@ -150,7 +150,7 @@ entry__abs A 0 ENTRY 0 jmp_tab dist/XC8_PIC10F222/production/pic10_c_servo.X.pro
 _OPTION 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __end_of_Delay_ms 1E2 0 CODE 0 text2 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __pcstackBANK0 9 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xc5HZoW1t.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcwAqjNMT.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hcinit A 0 ENTRY 0 cinit -
 __Hidloc 0 0 IDLOC 0 idloc -
@@ -183,15 +183,15 @@ __S1 18 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 _abs 17E 0 CODE 0 text1 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __end_of_abs 1A0 0 CODE 0 text1 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-reset_vec 3FE 0 CODE 0 reset_vec /tmp/xc5HZoW1t.obj
+reset_vec 3FE 0 CODE 0 reset_vec /tmp/xcwAqjNMT.obj
 __pmaintext 1E2 0 CODE 0 maintext dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1FFE 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
 main@width 14 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F222/production/pic10_c_servo.X.production.obj
-stackhi 0 0 ABS 0 - /tmp/xc5HZoW1t.obj
-stacklo 0 0 ABS 0 - /tmp/xc5HZoW1t.obj
+stackhi 0 0 ABS 0 - /tmp/xcwAqjNMT.obj
+stacklo 0 0 ABS 0 - /tmp/xcwAqjNMT.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -

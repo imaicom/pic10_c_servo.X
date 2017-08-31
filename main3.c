@@ -75,4 +75,4 @@ void main(void) {
          } else {GP2 = 0; GP1 = 0;}; // free // if((35 <= max_width)&&(max_width < 240))
         
     };  //  while(1)
-}
+} // main

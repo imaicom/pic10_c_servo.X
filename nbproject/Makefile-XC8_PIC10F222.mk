@@ -132,7 +132,7 @@ dist/${CND_CONF}/${IMAGE_TYPE}/pic10_c_servo.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: $
 	${MP_CC} $(MP_EXTRA_LD_PRE) --chip=$(MP_PROCESSOR_OPTION) -G -mdist/${CND_CONF}/${IMAGE_TYPE}/pic10_c_servo.X.${IMAGE_TYPE}.map  --double=24 --float=24 --opt=+asm,+asmfile,+speed,-space,-debug,-local --addrqual=ignore --mode=pro -P -N255 --warn=0 --asmlist -DXPRJ_XC8_PIC10F222=$(CND_CONF)  --summary=default,-psect,-class,+mem,+hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,+osccal,-resetbits,-download,-stackcall,+clib --output=-mcof,+elf:multilocs --stack=compiled:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"     $(COMPARISON_BUILD) --memorysummary dist/${CND_CONF}/${IMAGE_TYPE}/memoryfile.xml -odist/${CND_CONF}/${IMAGE_TYPE}/pic10_c_servo.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}     
 	
 	@echo Normalizing hex file
-	@"/Applications/microchip/mplabx/v3.65/mplab_ide.app/Contents/Resources/mplab_ide/platform/../mplab_ide/modules/../../bin/hexmate" --edf="/Applications/microchip/mplabx/v3.65/mplab_ide.app/Contents/Resources/mplab_ide/platform/../mplab_ide/modules/../../dat/en_msgs.txt" dist/${CND_CONF}/${IMAGE_TYPE}/pic10_c_servo.X.${IMAGE_TYPE}.hex -odist/${CND_CONF}/${IMAGE_TYPE}/pic10_c_servo.X.${IMAGE_TYPE}.hex
+	@"/Applications/microchip/mplabx/v4.00/mplab_ide.app/Contents/Resources/mplab_ide/platform/../mplab_ide/modules/../../bin/hexmate" --edf="/Applications/microchip/mplabx/v4.00/mplab_ide.app/Contents/Resources/mplab_ide/platform/../mplab_ide/modules/../../dat/en_msgs.txt" dist/${CND_CONF}/${IMAGE_TYPE}/pic10_c_servo.X.${IMAGE_TYPE}.hex -odist/${CND_CONF}/${IMAGE_TYPE}/pic10_c_servo.X.${IMAGE_TYPE}.hex
 
 endif
 
